@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
--- https://www.phpmyadmin.net/
+-- version 4.4.15.9
+-- https://www.phpmyadmin.net
 --
--- Hôte : localhost:3306
--- Généré le :  mer. 10 oct. 2018 à 14:03
--- Version du serveur :  10.1.35-MariaDB-cll-lve
--- Version de PHP :  5.6.30
+-- Host: localhost
+-- Generation Time: Oct 10, 2018 at 07:33 PM
+-- Server version: 5.6.37
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,24 +17,24 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `gestio52_gestionDeStage`
+-- Database: `GestionDeStage`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admins`
+-- Table structure for table `admins`
 --
 
-CREATE TABLE `admins` (
+CREATE TABLE IF NOT EXISTS `admins` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `phone` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `admins`
+-- Dumping data for table `admins`
 --
 
 INSERT INTO `admins` (`id`, `user_id`, `name`, `phone`) VALUES
@@ -45,16 +43,16 @@ INSERT INTO `admins` (`id`, `user_id`, `name`, `phone`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `buildings_types`
+-- Table structure for table `buildings_types`
 --
 
-CREATE TABLE `buildings_types` (
+CREATE TABLE IF NOT EXISTS `buildings_types` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `buildings_types`
+-- Dumping data for table `buildings_types`
 --
 
 INSERT INTO `buildings_types` (`id`, `name`) VALUES
@@ -68,10 +66,10 @@ INSERT INTO `buildings_types` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `internships`
+-- Table structure for table `internships`
 --
 
-CREATE TABLE `internships` (
+CREATE TABLE IF NOT EXISTS `internships` (
   `id` int(11) NOT NULL,
   `title` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `address` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -85,10 +83,10 @@ CREATE TABLE `internships` (
   `supervisor_id` int(11) NOT NULL,
   `created` date NOT NULL,
   `modified` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `internships`
+-- Dumping data for table `internships`
 --
 
 INSERT INTO `internships` (`id`, `title`, `address`, `city`, `province`, `postal_code`, `administrative_region`, `description`, `buildingType_id`, `actif`, `supervisor_id`, `created`, `modified`) VALUES
@@ -101,74 +99,70 @@ INSERT INTO `internships` (`id`, `title`, `address`, `city`, `province`, `postal
 -- --------------------------------------------------------
 
 --
--- Structure de la table `internships_missions`
+-- Table structure for table `internships_missions`
 --
 
-CREATE TABLE `internships_missions` (
+CREATE TABLE IF NOT EXISTS `internships_missions` (
   `internship_id` int(11) NOT NULL,
   `mission_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `internships_missions`
+-- Dumping data for table `internships_missions`
 --
 
 INSERT INTO `internships_missions` (`internship_id`, `mission_id`) VALUES
 (1, 1),
-(1, 23),
+(3, 1),
+(5, 1),
+(3, 2),
+(5, 2),
+(3, 3),
+(5, 3),
+(3, 4),
 (2, 5),
 (2, 6),
 (2, 7),
-(2, 8),
-(3, 1),
-(3, 2),
-(3, 3),
-(3, 4),
-(4, 14),
-(4, 31),
-(5, 1),
-(5, 2),
-(5, 3),
 (5, 7),
+(2, 8),
+(4, 14),
+(1, 23),
 (5, 27),
 (5, 29),
+(4, 31),
 (5, 31);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `internships_types`
+-- Table structure for table `internships_types`
 --
 
-CREATE TABLE `internships_types` (
+CREATE TABLE IF NOT EXISTS `internships_types` (
   `internship_id` int(11) NOT NULL,
   `type_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `internships_types`
+-- Dumping data for table `internships_types`
 --
 
 INSERT INTO `internships_types` (`internship_id`, `type_id`) VALUES
 (1, 17),
-(2, 35),
-(2, 36),
-(2, 37),
 (3, 17),
 (3, 18),
-(3, 19),
-(3, 20),
-(3, 21),
 (4, 18),
-(4, 19),
-(4, 20),
-(4, 21),
-(4, 22),
-(4, 42),
 (5, 18),
+(3, 19),
+(4, 19),
 (5, 19),
+(3, 20),
+(4, 20),
 (5, 20),
+(3, 21),
+(4, 21),
 (5, 21),
+(4, 22),
 (5, 22),
 (5, 23),
 (5, 24),
@@ -180,21 +174,36 @@ INSERT INTO `internships_types` (`internship_id`, `type_id`) VALUES
 (5, 30),
 (5, 31),
 (5, 32),
-(5, 33);
+(5, 33),
+(2, 35),
+(2, 36),
+(2, 37),
+(4, 42);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `missions`
+-- Table structure for table `interships_students`
 --
 
-CREATE TABLE `missions` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE IF NOT EXISTS `interships_students` (
+  `internship_id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Déchargement des données de la table `missions`
+-- Table structure for table `missions`
+--
+
+CREATE TABLE IF NOT EXISTS `missions` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `missions`
 --
 
 INSERT INTO `missions` (`id`, `name`) VALUES
@@ -229,10 +238,10 @@ INSERT INTO `missions` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `students`
+-- Table structure for table `students`
 --
 
-CREATE TABLE `students` (
+CREATE TABLE IF NOT EXISTS `students` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `student_number` int(10) NOT NULL,
@@ -242,10 +251,10 @@ CREATE TABLE `students` (
   `info` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `grade` decimal(3,0) DEFAULT NULL,
   `actif` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `students`
+-- Dumping data for table `students`
 --
 
 INSERT INTO `students` (`id`, `user_id`, `student_number`, `last_name`, `first_name`, `phone`, `info`, `grade`, `actif`) VALUES
@@ -265,10 +274,10 @@ INSERT INTO `students` (`id`, `user_id`, `student_number`, `last_name`, `first_n
 -- --------------------------------------------------------
 
 --
--- Structure de la table `supervisors`
+-- Table structure for table `supervisors`
 --
 
-CREATE TABLE `supervisors` (
+CREATE TABLE IF NOT EXISTS `supervisors` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `gender` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -285,10 +294,10 @@ CREATE TABLE `supervisors` (
   `extension` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `cellphone` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fax` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `supervisors`
+-- Dumping data for table `supervisors`
 --
 
 INSERT INTO `supervisors` (`id`, `user_id`, `gender`, `first_name`, `last_name`, `title`, `location`, `address`, `city`, `province`, `postal_code`, `email`, `phone`, `extension`, `cellphone`, `fax`) VALUES
@@ -300,16 +309,16 @@ INSERT INTO `supervisors` (`id`, `user_id`, `gender`, `first_name`, `last_name`,
 -- --------------------------------------------------------
 
 --
--- Structure de la table `types`
+-- Table structure for table `types`
 --
 
-CREATE TABLE `types` (
+CREATE TABLE IF NOT EXISTS `types` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `types`
+-- Dumping data for table `types`
 --
 
 INSERT INTO `types` (`id`, `name`) VALUES
@@ -319,27 +328,27 @@ INSERT INTO `types` (`id`, `name`) VALUES
 (20, 'Centre de jour et soins à domicile'),
 (21, 'Centre de jour, soins de clientèle hébergée'),
 (22, 'Hôpital de jour'),
-(23, 'Neurologie, pédiatrie poss d\'ortho/rhumato'),
+(23, 'Neurologie, pédiatrie poss d''ortho/rhumato'),
 (24, 'Ortho/rhumato'),
-(25, 'Ortho/rhumato et perte d\'autonomie'),
+(25, 'Ortho/rhumato et perte d''autonomie'),
 (26, 'Orthopédie/rhumatologie'),
 (27, 'Orthopédie/rhumatologie principalement'),
-(28, 'Orthopédie/rhumatologie, Perte d\'autonomie'),
+(28, 'Orthopédie/rhumatologie, Perte d''autonomie'),
 (29, 'Perte autonomie fonctionnelle'),
-(30, 'Perte d\'autonomie'),
-(31, 'Perte d\'autonomie et ortho/rhumato'),
-(32, 'Perte d\'autonomie un peu de neuro et d\'ortho'),
-(33, 'Perte d\'autonomie, cardiorespiratoire, palliatif'),
-(34, 'Perte d\'autonomie, neuro et quelques cas ortho'),
-(35, 'Perte d\'autonomie, neurologie (cas séquélaires et évolutifs)'),
-(36, 'Perte d\'autonomie, ortho, cardio, neuro'),
-(37, 'Perte d\'autonomie, ortho/rhumato'),
-(38, 'Perte d\'autonomie, ortho/rhumato, cardiorespiratoire'),
-(39, 'Perte d\'autonomie, ortopédie/rhumato, neuro'),
-(40, 'Perte d\'autonomie, Orthopédie/rhumatologie'),
-(41, 'Perte d\'autonomie, orthopédie/rhumatologie,neuro'),
-(42, 'Perte d\'autonomie, orthopédie/rhumatologie, neuro, cardiorespiratoire'),
-(43, 'Principalement ortho/rhumato, un eu de perte d\'autonomie'),
+(30, 'Perte d''autonomie'),
+(31, 'Perte d''autonomie et ortho/rhumato'),
+(32, 'Perte d''autonomie un peu de neuro et d''ortho'),
+(33, 'Perte d''autonomie, cardiorespiratoire, palliatif'),
+(34, 'Perte d''autonomie, neuro et quelques cas ortho'),
+(35, 'Perte d''autonomie, neurologie (cas séquélaires et évolutifs)'),
+(36, 'Perte d''autonomie, ortho, cardio, neuro'),
+(37, 'Perte d''autonomie, ortho/rhumato'),
+(38, 'Perte d''autonomie, ortho/rhumato, cardiorespiratoire'),
+(39, 'Perte d''autonomie, ortopédie/rhumato, neuro'),
+(40, 'Perte d''autonomie, Orthopédie/rhumatologie'),
+(41, 'Perte d''autonomie, orthopédie/rhumatologie,neuro'),
+(42, 'Perte d''autonomie, orthopédie/rhumatologie, neuro, cardiorespiratoire'),
+(43, 'Principalement ortho/rhumato, un eu de perte d''autonomie'),
 (44, 'Soins clientèle à domicile'),
 (45, 'Soins clientèle à domicile et clientèle externe'),
 (46, 'Soins clientèle à domicile et en hébergement, Centre de jour'),
@@ -363,18 +372,18 @@ INSERT INTO `types` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `role` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
@@ -395,24 +404,24 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 (29, '222@gmail.com', '$2y$10$uSYBbPEX9peu0y3tNrLkUOC8l3Lw0GX6vHvWs1N67HPUDBVWv7lQ.', 'student');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `admins`
+-- Indexes for table `admins`
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `buildings_types`
+-- Indexes for table `buildings_types`
 --
 ALTER TABLE `buildings_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `internships`
+-- Indexes for table `internships`
 --
 ALTER TABLE `internships`
   ADD PRIMARY KEY (`id`),
@@ -420,27 +429,34 @@ ALTER TABLE `internships`
   ADD KEY `id_buildingType` (`buildingType_id`);
 
 --
--- Index pour la table `internships_missions`
+-- Indexes for table `internships_missions`
 --
 ALTER TABLE `internships_missions`
   ADD PRIMARY KEY (`internship_id`,`mission_id`),
   ADD KEY `id_mission` (`mission_id`);
 
 --
--- Index pour la table `internships_types`
+-- Indexes for table `internships_types`
 --
 ALTER TABLE `internships_types`
   ADD PRIMARY KEY (`internship_id`,`type_id`),
   ADD KEY `id_type` (`type_id`);
 
 --
--- Index pour la table `missions`
+-- Indexes for table `interships_students`
+--
+ALTER TABLE `interships_students`
+  ADD PRIMARY KEY (`internship_id`,`student_id`),
+  ADD KEY `student_id` (`student_id`);
+
+--
+-- Indexes for table `missions`
 --
 ALTER TABLE `missions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `students`
+-- Indexes for table `students`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`id`),
@@ -448,119 +464,117 @@ ALTER TABLE `students`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `supervisors`
+-- Indexes for table `supervisors`
 --
 ALTER TABLE `supervisors`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Index pour la table `types`
+-- Indexes for table `types`
 --
 ALTER TABLE `types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `admins`
+-- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `buildings_types`
+-- AUTO_INCREMENT for table `buildings_types`
 --
 ALTER TABLE `buildings_types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT pour la table `internships`
+-- AUTO_INCREMENT for table `internships`
 --
 ALTER TABLE `internships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT pour la table `missions`
+-- AUTO_INCREMENT for table `missions`
 --
 ALTER TABLE `missions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
 --
--- AUTO_INCREMENT pour la table `students`
+-- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
--- AUTO_INCREMENT pour la table `supervisors`
+-- AUTO_INCREMENT for table `supervisors`
 --
 ALTER TABLE `supervisors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT pour la table `types`
+-- AUTO_INCREMENT for table `types`
 --
 ALTER TABLE `types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
+--
+-- Constraints for dumped tables
+--
 
 --
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `admins`
+-- Constraints for table `admins`
 --
 ALTER TABLE `admins`
   ADD CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `internships`
+-- Constraints for table `internships`
 --
 ALTER TABLE `internships`
   ADD CONSTRAINT `internships_ibfk_1` FOREIGN KEY (`supervisor_id`) REFERENCES `supervisors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `internships_ibfk_2` FOREIGN KEY (`buildingType_id`) REFERENCES `buildings_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `internships_missions`
+-- Constraints for table `internships_missions`
 --
 ALTER TABLE `internships_missions`
   ADD CONSTRAINT `internships_missions_ibfk_1` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `internships_missions_ibfk_2` FOREIGN KEY (`mission_id`) REFERENCES `missions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `internships_types`
+-- Constraints for table `internships_types`
 --
 ALTER TABLE `internships_types`
   ADD CONSTRAINT `internships_types_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `internships_types_ibfk_2` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `students`
+-- Constraints for table `interships_students`
+--
+ALTER TABLE `interships_students`
+  ADD CONSTRAINT `interships_students_ibfk_1` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `interships_students_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `students`
 --
 ALTER TABLE `students`
   ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `supervisors`
+-- Constraints for table `supervisors`
 --
 ALTER TABLE `supervisors`
   ADD CONSTRAINT `supervisors_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
