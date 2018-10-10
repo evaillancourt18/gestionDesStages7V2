@@ -52,7 +52,7 @@ $loguser = $this->request->session()->read('Auth.User')
         <tr>
             <th scope="row"><?= __('Phone') ?></th>
             <?php $phone = $internship->supervisor->phone; $phone = str_replace('.', '-', $phone) ?>
-            <td><?= $internship->has('supervisor') ? $this->Html->link($phone, ['controller' => 'Supervisors', 'action' => 'view', $internship->supervisor->id]) : '' ?></td>
+            <td><?= $phone ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Building Type') ?></th>

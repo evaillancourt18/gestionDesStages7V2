@@ -1,5 +1,5 @@
 <?php
-$loguser = $this->request->session()->read('Auth.User')
+$loguser = $this->request->getSession()->read('Auth.User')
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Internship[]|\Cake\Collection\CollectionInterface $internships
@@ -38,6 +38,8 @@ $loguser = $this->request->session()->read('Auth.User')
         </thead>
         <tbody>
             <?php foreach ($internships as $internship): ?>
+                <?php if(($loguser['id'] == $internship['supervisor']->user_id) || $loguser['role'] === 'student') : ?>
+                
                 <tr>
                     <td><?= h($internship->title) ?></td>
                     <td><?= h($internship->address) ?></td>
@@ -47,15 +49,19 @@ $loguser = $this->request->session()->read('Auth.User')
                     <td><?= h($internship->administrative_region) ?></td>
                     <td><?= h($internship->actif ? __('Yes') : __('No')); ?></td>
                     <?php $phone = $internship->supervisor->phone; $phone = str_replace('.', '-', $phone) ?>
-                    <td><?= $internship->has('supervisor') ? $this->Html->link($phone, ['controller' => 'Supervisors', 'action' => 'view', $internship->supervisor->id]) : '' ?></td>
+                    <td><?= $phone ?></td>
                     <td><?= h($internship['buildings_type']->name) ?></td>
                     <td><?= h($internship->created) ?></td> 
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $internship->id]) ?>
+                        
+                        <?php if($loguser['role'] !== 'student') : ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $internship->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internship->id], ['confirm' => __('Are you sure you want to delete # {0}?', $internship->id)]) ?>
+                        <?php endif ?>
                     </td>
                 </tr>
+                <?php endif ?>
             <?php endforeach; ?>
         </tbody>
     </table>

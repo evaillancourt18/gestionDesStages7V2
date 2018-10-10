@@ -14,7 +14,7 @@ class InternshipsController extends AppController
 {
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['view', 'index']);
+        $this->Auth->allow(['index']);
     }
     
     
@@ -22,6 +22,10 @@ class InternshipsController extends AppController
         $action = $this->request->getParam('action');
 
         if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        if($action === 'view' &&  $user['role'] === 'student') {
             return true;
         }
 
