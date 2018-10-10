@@ -1,0 +1,7 @@
+2018-09-19 19:36:12 Error: [RuntimeException] Unknown command `cake all`. Run `cake --help` to get the list of valid commands. in C:\Program Files (x86)\Ampps\www\GestionDesStages7\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\GestionDesStages7\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'all')
+#1 C:\Program Files (x86)\Ampps\www\GestionDesStages7\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
