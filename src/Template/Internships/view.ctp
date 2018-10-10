@@ -72,8 +72,9 @@ $loguser = $this->request->session()->read('Auth.User')
         </tr>        
     </table>
     <?php 
-    $id = $internship->id;  ?>
-   <?= $this->Form->create('Postuler', array('action'=> 'postuler', $id))  ?>
+    $id = $internship->id;  
+    ?>
+   <?= $this->Form->create('Postuler', ['type' => 'GET', 'url' => ['controller' => 'InternshipsStudents', 'action'=> 'add', $internship->id]])  ?>
    <?= $this->Form->button('Postuler')  ?>
    <?= $this->Form->end()  ?>
     <div class="related">

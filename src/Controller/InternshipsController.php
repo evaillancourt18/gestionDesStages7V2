@@ -78,7 +78,9 @@ class InternshipsController extends AppController
     }
 
     public function postuler($id = null){
-        debug($id);
+        $internshipStudents = $this->InternshipsStudent->newEntity();
+        $internshipStudents->internship_id = $id;
+        debug($internshipStudents->internship_id);
         die();
     }
 

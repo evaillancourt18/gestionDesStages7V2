@@ -13087,3 +13087,168 @@ Stack Trace:
 #18 {main}
 
 
+2018-10-10 20:16:59 Error: [ParseError] syntax error, unexpected '?>'
+Request URL: /internships/view/2
+Referer URL: http://localhost/gestionDesStages7V2/internships
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\View\View.php(1201): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\View\View.php(803): Cake\View\View->_render('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render(NULL, NULL)
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+
+
+2018-10-10 20:28:52 Error: [Cake\Controller\Exception\MissingActionException] Action InternshipsController::postuler1() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InternshipsController',
+  'action' => 'postuler1',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /internships/postuler1
+Referer URL: http://localhost/gestionDesStages7V2/internships/view/2
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+
+2018-10-10 20:28:52 Error: [Cake\Controller\Exception\MissingActionException] Action InternshipsController::postuler1() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'InternshipsController',
+  'action' => 'postuler1',
+  'prefix' => '',
+  'plugin' => false,
+)
+Request URL: /internships/postuler1
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+
+
+2018-10-10 20:40:22 Error: [Error] Call to a member function newEntity() on boolean
+Request URL: /internships/postuler/2
+Referer URL: http://localhost/gestionDesStages7V2/internships/view/2
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\InternshipsController->postuler('2')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
+2018-10-10 20:46:44 Error: [ParseError] syntax error, unexpected '}'
+Request URL: /internships/view/2
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('C:\\Program File...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Int...', 'App')
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(89): Cake\Core\App::className('Internships', 'Controller', 'Controller')
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(37): Cake\Http\ControllerFactory->getControllerClass(Object(Cake\Http\ServerRequest))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2018-10-10 20:47:01 Error: [Error] Call to a member function newEntity() on boolean
+Request URL: /internships/postuler/2
+Referer URL: http://localhost/gestionDesStages7V2/internships/view/2
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\InternshipsController->postuler('2')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+
