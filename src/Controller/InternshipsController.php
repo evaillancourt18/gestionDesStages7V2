@@ -77,6 +77,11 @@ class InternshipsController extends AppController
         $this->set('internship', $internship);
     }
 
+    public function postuler($id = null){
+        debug($id);
+        die();
+    }
+
     /**
      * Add method
      *

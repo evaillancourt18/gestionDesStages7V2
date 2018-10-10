@@ -38,7 +38,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         </thead>
         <tbody>
             <?php foreach ($internships as $internship): ?>
-                <?php if(($loguser['id'] == $internship['supervisor']->user_id) || $loguser['role'] === 'student') : ?>
+                <?php if(($loguser['id'] == $internship['supervisor']->user_id) || $loguser['role'] === 'student' || $loguser['role'] === 'admin') : ?>
                 
                 <tr>
                     <td><?= h($internship->title) ?></td>

@@ -71,6 +71,11 @@ $loguser = $this->request->session()->read('Auth.User')
             <td><?= h($internship->description) ?></td>
         </tr>        
     </table>
+    <?php 
+    $id = $internship->id;  ?>
+   <?= $this->Form->create('Postuler', array('action'=> 'postuler', $id))  ?>
+   <?= $this->Form->button('Postuler')  ?>
+   <?= $this->Form->end()  ?>
     <div class="related">
         <h4><?= __('Related Missions') ?></h4>
         <?php if (!empty($internship->missions)): ?>
