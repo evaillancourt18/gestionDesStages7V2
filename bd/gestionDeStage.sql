@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 10, 2018 at 07:33 PM
+-- Generation Time: Oct 10, 2018 at 07:43 PM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -135,6 +135,17 @@ INSERT INTO `internships_missions` (`internship_id`, `mission_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `internships_students`
+--
+
+CREATE TABLE IF NOT EXISTS `internships_students` (
+  `internship_id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `internships_types`
 --
 
@@ -179,17 +190,6 @@ INSERT INTO `internships_types` (`internship_id`, `type_id`) VALUES
 (2, 36),
 (2, 37),
 (4, 42);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `interships_students`
---
-
-CREATE TABLE IF NOT EXISTS `interships_students` (
-  `internship_id` int(11) NOT NULL,
-  `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -436,18 +436,18 @@ ALTER TABLE `internships_missions`
   ADD KEY `id_mission` (`mission_id`);
 
 --
+-- Indexes for table `internships_students`
+--
+ALTER TABLE `internships_students`
+  ADD PRIMARY KEY (`internship_id`,`student_id`),
+  ADD KEY `student_id` (`student_id`);
+
+--
 -- Indexes for table `internships_types`
 --
 ALTER TABLE `internships_types`
   ADD PRIMARY KEY (`internship_id`,`type_id`),
   ADD KEY `id_type` (`type_id`);
-
---
--- Indexes for table `interships_students`
---
-ALTER TABLE `interships_students`
-  ADD PRIMARY KEY (`internship_id`,`student_id`),
-  ADD KEY `student_id` (`student_id`);
 
 --
 -- Indexes for table `missions`
@@ -551,18 +551,18 @@ ALTER TABLE `internships_missions`
   ADD CONSTRAINT `internships_missions_ibfk_2` FOREIGN KEY (`mission_id`) REFERENCES `missions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `internships_students`
+--
+ALTER TABLE `internships_students`
+  ADD CONSTRAINT `internships_students_ibfk_1` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `internships_students_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `internships_types`
 --
 ALTER TABLE `internships_types`
   ADD CONSTRAINT `internships_types_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `internships_types_ibfk_2` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `interships_students`
---
-ALTER TABLE `interships_students`
-  ADD CONSTRAINT `interships_students_ibfk_1` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `interships_students_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `students`

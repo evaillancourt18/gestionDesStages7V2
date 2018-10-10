@@ -52,6 +52,7 @@ class Internship extends Entity
         'description' => true,
         'supervisor' => true,
         'missions' => true,
-        'types' => true
+        'types' => true,
+        'students' => true
     ];
 }

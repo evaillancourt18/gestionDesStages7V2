@@ -61,6 +61,11 @@ class InternshipsTable extends Table
             'foreignKey' => 'buildingType_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsToMany('Students', [
+            'foreignKey' => 'internship_id',
+            'targetForeignKey' => 'student_id',
+            'joinTable' => 'internships_students'
+        ]);
     }
 
     /**

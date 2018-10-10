@@ -38,6 +38,7 @@ class Student extends Entity
         'info' => true,
         'grade' => true,
         'actif' => true,
-        'slug' => true
+        'slug' => true,
+        'internships' => true
     ];
 }
