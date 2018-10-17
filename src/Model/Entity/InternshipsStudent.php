@@ -4,8 +4,9 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * InternshipsStudent Entity
+ * Internshipsstudent Entity
  *
+ * @property int $id
  * @property int $internship_id
  * @property int $student_id
  *
@@ -25,6 +26,8 @@ class InternshipsStudent extends Entity
      * @var array
      */
     protected $_accessible = [
+        'internship_id' => true,
+        'student_id' => true,
         'internship' => true,
         'student' => true
     ];

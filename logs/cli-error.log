@@ -5,3 +5,43 @@ Stack Trace:
 #2 {main}
 
 
+2018-10-17 19:19:09 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestiondestage.internshipsstudents' doesn't exist in C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'internshipsstud...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('internshipsstud...', Array)
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('internshipsstud...')
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(324): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Bake\Shell\Task\ModelTask->findBelongsTo(Object(App\Model\Table\InternshipsstudentsTable), Array)
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\InternshipsstudentsTable))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\InternshipsstudentsTable), 'internships_stu...', 'InternshipsStud...')
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('InternshipsStud...')
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\BakeShell.php(273): Bake\Shell\Task\ModelTask->main('InternshipsStud...')
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('InternshipsStud...', 0)
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\BakeShell.php(274): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('internships_stu...')
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-10-17 19:19:31 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestiondestage.internshipsstudents' doesn't exist in C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'internshipsstud...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('internshipsstud...', Array)
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('internshipsstud...')
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(324): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Bake\Shell\Task\ModelTask->findBelongsTo(Object(App\Model\Table\InternshipsstudentsTable), Array)
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\InternshipsstudentsTable))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\InternshipsstudentsTable), 'internships_stu...', 'InternshipsStud...')
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('InternshipsStud...')
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\BakeShell.php(273): Bake\Shell\Task\ModelTask->main('InternshipsStud...')
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('InternshipsStud...', 0)
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\Shell\BakeShell.php(274): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('internships_Stu...')
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+

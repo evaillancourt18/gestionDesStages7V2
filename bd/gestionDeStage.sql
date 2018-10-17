@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 10, 2018 at 07:43 PM
+-- Generation Time: Oct 17, 2018 at 07:58 PM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -139,9 +139,18 @@ INSERT INTO `internships_missions` (`internship_id`, `mission_id`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `internships_students` (
+  `id` int(11) NOT NULL,
   `internship_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `internships_students`
+--
+
+INSERT INTO `internships_students` (`id`, `internship_id`, `student_id`) VALUES
+(1, 2, 5),
+(3, 4, 5);
 
 -- --------------------------------------------------------
 
@@ -439,7 +448,8 @@ ALTER TABLE `internships_missions`
 -- Indexes for table `internships_students`
 --
 ALTER TABLE `internships_students`
-  ADD PRIMARY KEY (`internship_id`,`student_id`),
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `internship_id` (`internship_id`),
   ADD KEY `student_id` (`student_id`);
 
 --
@@ -502,6 +512,11 @@ ALTER TABLE `buildings_types`
 ALTER TABLE `internships`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
+-- AUTO_INCREMENT for table `internships_students`
+--
+ALTER TABLE `internships_students`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `missions`
 --
 ALTER TABLE `missions`
@@ -554,8 +569,8 @@ ALTER TABLE `internships_missions`
 -- Constraints for table `internships_students`
 --
 ALTER TABLE `internships_students`
-  ADD CONSTRAINT `internships_students_ibfk_1` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `internships_students_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `internships_students_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `internships_students_ibfk_2` FOREIGN KEY (`internship_id`) REFERENCES `internships` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `internships_types`

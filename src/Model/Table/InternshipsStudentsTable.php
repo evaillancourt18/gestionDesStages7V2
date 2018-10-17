@@ -7,19 +7,19 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * InternshipsStudents Model
+ * Internshipsstudents Model
  *
  * @property \App\Model\Table\InternshipsTable|\Cake\ORM\Association\BelongsTo $Internships
  * @property \App\Model\Table\StudentsTable|\Cake\ORM\Association\BelongsTo $Students
  *
- * @method \App\Model\Entity\InternshipsStudent get($primaryKey, $options = [])
- * @method \App\Model\Entity\InternshipsStudent newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\InternshipsStudent[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\InternshipsStudent|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\InternshipsStudent|bool saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\InternshipsStudent patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\InternshipsStudent[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\InternshipsStudent findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Internshipsstudent get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Internshipsstudent newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Internshipsstudent[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Internshipsstudent|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Internshipsstudent|bool saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Internshipsstudent patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Internshipsstudent[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Internshipsstudent findOrCreate($search, callable $callback = null, $options = [])
  */
 class InternshipsStudentsTable extends Table
 {
@@ -46,6 +46,21 @@ class InternshipsStudentsTable extends Table
             'foreignKey' => 'student_id',
             'joinType' => 'INNER'
         ]);
+    }
+
+    /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        return $validator;
     }
 
     /**

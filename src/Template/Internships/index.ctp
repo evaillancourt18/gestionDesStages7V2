@@ -1,5 +1,5 @@
 <?php
-$loguser = $this->request->getSession()->read('Auth.User')
+$loguser = $this->request->getSession()->read('Auth.User');
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Internship[]|\Cake\Collection\CollectionInterface $internships
@@ -16,6 +16,10 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <?php if ($loguser['role'] == 'supervisor') : ?>
             <li> <?= $this->Html->link(__('New Internship'), ['controller' => 'Internships', 'action' => 'add', $loguser['id']]) ?></li>
         <?php endif ?>
+        <?php if ($loguser['role'] == 'student') : ?>
+        <li><?= $this->Html->link(__('List of application'), ['controller' => 'InternshipsStudents', 'action' => 'index']) ?></li>
+         <?php endif ?>
+       
     </ul>
 </nav>
 <div class="internships index large-9 medium-8 columns content">
