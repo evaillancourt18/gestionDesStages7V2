@@ -2,6 +2,9 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
+
+
 
 /**
  * Internships Controller
@@ -77,13 +80,6 @@ class InternshipsController extends AppController
         $this->set('internship', $internship);
     }
 
-    public function postuler($id = null){
-        $internshipStudents = $this->InternshipsStudent->newEntity();
-        $internshipStudents->internship_id = $id;
-        debug($internshipStudents->internship_id);
-        die();
-    }
-
     /**
      * Add method
      *
@@ -96,10 +92,18 @@ class InternshipsController extends AppController
             if ($this->Internships->save($internship)) {
                 $this->Flash->success(__('The internship has been saved.'));
 
+                $users = $this->Internships->Supervisors->Users->find('all' , ['limit' => 200])->toArray();
+                $supervisor = $this->Internships->Supervisors->get($internship->supervisor_id, [
+                    'contain' => []
+                ]);
+                
+                foreach($users as $user) {                   
+                    if($user['role'] === 'student') {
+                        $this->email($user->email, $internship, $supervisor);
+                    }
+                }
                 return $this->redirect(['action' => 'index']);
             }
-            
-            
             $this->Flash->error(__('The internship could not be saved. Please, try again.'));
         }
         $buildingsTypes = $this->Internships->BuildingsTypes->find('list', ['limit' => 200]);
@@ -155,5 +159,17 @@ class InternshipsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function email($address, $internship, $supervisor) {
+        $email = new Email('default');
+        $email->to($address);
+        $email->subject(__('Un nouvel offre de stage est disponible'));
+        $email->send($internship->title . ' ' . 
+                     $internship->address . ' ' .
+                     $internship->city . ' ' . 
+                     $internship->description . ' ' .
+                     $supervisor->phone
+                    );
     }
 }
