@@ -34,45 +34,6 @@ class InternshipsStudentsController extends AppController
         $this->set(compact('internshipsStudents'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id InternshipsStudent id.
-     * @return \Cake\Http\Response|void
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $internshipsStudent = $this->InternshipsStudents->get($id, [
-            'contain' => ['Internships', 'Students']
-        ]);
-
-        $this->set('internshipsStudent', $internshipsStudent);
-    }
-
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
-        $internshipsStudent = $this->InternshipsStudents->newEntity();
-        if ($this->request->is('post')) {
-            $internshipsStudent = $this->InternshipsStudents->patchEntity($internshipsStudent, $this->request->getData());
-            if ($this->InternshipsStudents->save($internshipsStudent)) {
-                $this->Flash->success(__('The internshipsStudent has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The internshipsStudent could not be saved. Please, try again.'));
-        }
-        $internships = $this->InternshipsStudents->Internships->find('list', ['limit' => 200]);
-        $students = $this->InternshipsStudents->Students->find('list', ['limit' => 200]);
-        $this->set(compact('internshipsStudent', 'internships', 'students'));
-    }
-
-
 
     /**
      * Delete method

@@ -36,14 +36,12 @@ $loguser = $this->request->getSession()->read('Auth.User')
 			 <?php if($loguser['role'] == 'student' && $loguser['id'] === $internshipsStudent->student->user_id) {?>
                 <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $internshipsStudent->internship_id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internshipsStudent->id], ['confirm' => __('Are you sure you want to delete # {0}?', $internshipsStudent->internship_id)]) ?>
                 </td>
 				 <?php }else{ ?> 
 				 <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
                 <td><?= $internshipsStudent->has('student') ? $this->Html->link($internshipsStudent->student->id, ['controller' => 'Students', 'action' => 'view', $internshipsStudent->student->id]) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $internshipsStudent->internship_id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internshipsStudent->id], ['confirm' => __('Are you sure you want to delete # {0}?', $internshipsStudent->internship_id)]) ?>
                 </td>
 				 <?php } ?>
