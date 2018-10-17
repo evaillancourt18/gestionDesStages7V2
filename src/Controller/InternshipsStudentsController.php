@@ -118,4 +118,21 @@ class InternshipsStudentsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function postuler($InternshipId  = null){
+        $internshipsStudent = $this->InternshipsStudents->newEntity();
+        if($InternshipId!=null){
+        $internshipsStudent['internship_id'] = $InternshipId;
+        $loguser = $this->request->session()->read('Auth.User');
+        $student = $this->InternshipsStudents->Students->findByUserId($loguser['id'])->first();
+        $internshipsStudent['student_id'] = $student['id'];
+            if ($this->InternshipsStudents->save($internshipsStudent)) {
+                $this->Flash->success(__('The internships application has been saved.'));
+
+                return $this->redirect(['controller' => 'Internship', 'action' => 'index']);
+            }
+        }
+            $this->Flash->error(__('The internships application could not be saved. Please, try again.'));
+        
+    }
 }
