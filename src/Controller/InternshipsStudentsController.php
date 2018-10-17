@@ -129,7 +129,7 @@ class InternshipsStudentsController extends AppController
             if ($this->InternshipsStudents->save($internshipsStudent)) {
                 $this->Flash->success(__('The internships application has been saved.'));
 
-                return $this->redirect(['controller' => 'Internship', 'action' => 'index']);
+                return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
             }
         }
             $this->Flash->error(__('The internships application could not be saved. Please, try again.'));

@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\InternshipsStudent[]|\Cake\Collection\CollectionInterface $internshipsStudents
  */
+$loguser = $this->request->session()->read('Auth.User');
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -27,6 +28,13 @@
         <tbody>
             <?php foreach ($internshipsStudents as $internshipsStudent): ?>
             <tr>
+                <?php if($loguser['role'] == 'student') {?>
+                    <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
+                    <td class="actions">
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $internshipsStudent->internship_id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $internshipsStudent->internship_id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internshipsStudent->internship_id], ['confirm' => __('Are you sure you want to delete # {0}?', $internshipsStudent->internship_id)]) ?>
+                <?php }else{ ?> 
                 <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
                 <td><?= $internshipsStudent->has('student') ? $this->Html->link($internshipsStudent->student->id, ['controller' => 'Students', 'action' => 'view', $internshipsStudent->student->id]) : '' ?></td>
                 <td class="actions">
@@ -34,6 +42,7 @@
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $internshipsStudent->internship_id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internshipsStudent->internship_id], ['confirm' => __('Are you sure you want to delete # {0}?', $internshipsStudent->internship_id)]) ?>
                 </td>
+                <?php } ?>
             </tr>
             <?php endforeach; ?>
         </tbody>

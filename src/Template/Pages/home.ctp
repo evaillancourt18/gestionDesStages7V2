@@ -5,6 +5,9 @@
         <?php if($loguser) :?>
             <li><?= $this->Html->link(__('List Internships'), ['controller' => 'Internships', 'action' => 'index']) ?></li>
         <?php endif?>    
+        <?php if ($loguser['role'] == 'student') : ?>
+        <li><?= $this->Html->link(__('List of application'), ['controller' => 'InternshipsStudents', 'action' => 'index']) ?></li>
+        <?php endif?>    
         <?php if ($loguser['role'] == 'admin') : ?>
             <li> <?= $this->Html->link(__('List Supervisors'), ['controller' => 'Supervisors', 'action' => 'index']) ?> </li>
             <li> <?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'index']) ?></li>			
