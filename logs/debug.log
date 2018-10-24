@@ -19705,6 +19705,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -19795,6 +19796,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 18:17:17 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 34]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 34
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -19814,6 +19829,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -19957,6 +19973,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 18:17:17 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 34]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 34
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -19976,12 +20006,22 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
+=======
+2018-10-17 18:57:04 Notice: Notice (8): Undefined variable: internshipId in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsStudentsController.php, line 112]
+Request URL: /internships-students/delete/2/5
+Referer URL: http://localhost/gestionDesStages7V2/internships-students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+App\Controller\InternshipsStudentsController::delete() - APP/Controller\InternshipsStudentsController.php, line 112
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
@@ -20003,6 +20043,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20011,6 +20052,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:26:55 Notice: Notice (8): Undefined variable: loguser in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 12]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/users/login?redirect=%2Finternships-students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 12
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -20030,6 +20085,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20038,6 +20094,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:26:55 Notice: Notice (8): Undefined variable: loguser in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 26]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/users/login?redirect=%2Finternships-students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 26
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -20057,6 +20127,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20065,6 +20136,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:26:55 Notice: Notice (8): Undefined variable: internshipsStudents in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 33]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/users/login?redirect=%2Finternships-students
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 33
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -20084,6 +20169,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20092,6 +20178,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:27:05 Notice: Notice (8): Undefined variable: loguser in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 12]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 12
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -20111,6 +20211,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:52:27 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 107]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20119,6 +20220,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 107
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:27:05 Notice: Notice (8): Undefined variable: loguser in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 26]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 26
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -20138,6 +20253,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 18:59:24 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 106]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20147,6 +20263,20 @@ Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstr
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 106
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:27:05 Notice: Notice (8): Undefined variable: internshipsStudents in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 33]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 33
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -20166,6 +20296,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 19:03:35 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 108]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20175,6 +20306,20 @@ Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstr
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 108
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:28:50 Notice: Notice (8): Undefined variable: internshipsStudents in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 34]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 34
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -20194,6 +20339,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-10-17 19:04:37 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php, line 108]
 Request URL: /internships/add/19
 Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
@@ -20203,6 +20349,20 @@ Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstr
 App\Controller\InternshipsController::add() - APP/Controller\InternshipsController.php, line 108
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+=======
+2018-10-17 19:29:07 Notice: Notice (8): Undefined variable: internshipsstudents in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\InternshipsStudents\index.ctp, line 34]
+Request URL: /internships-students
+Referer URL: http://localhost/gestionDesStages7V2/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\InternshipsStudents\index.ctp, line 34
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
