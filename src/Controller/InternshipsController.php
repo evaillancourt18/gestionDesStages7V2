@@ -73,15 +73,10 @@ class InternshipsController extends AppController
         $internship = $this->Internships->get($id, [
             'contain' => ['Supervisors', 'Missions', 'Types', 'BuildingsTypes']
         ]);
+        $test = new InternshipsStudentsController;
+        $postuler = $test->APostuler($this->request->session()->read('Auth.User') ,$id);
 
-        $this->set('internship', $internship);
-    }
-
-    public function postuler($id = null){
-        $internshipStudents = $this->InternshipsStudent->newEntity();
-        $internshipStudents->internship_id = $id;
-        debug($internshipStudents->internship_id);
-        die();
+        $this->set(compact('internship', 'postuler'));
     }
 
     /**

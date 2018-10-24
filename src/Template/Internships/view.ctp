@@ -74,7 +74,7 @@ $loguser = $this->request->session()->read('Auth.User')
     <?php 
     $id = $internship->id;  
     ?>
-    <?php if ($loguser['role'] == 'student') : ?>
+    <?php if ($loguser['role'] == 'student' && $postuler) : ?>
    <?= $this->Form->create('Postuler', ['type' => 'GET', 'url' => ['controller' => 'InternshipsStudents', 'action'=> 'postuler', $internship->id]])  ?>
    <?= $this->Form->button('Postuler')  ?>
    <?= $this->Form->end()  ?>

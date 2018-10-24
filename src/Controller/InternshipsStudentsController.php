@@ -72,6 +72,17 @@ class InternshipsStudentsController extends AppController
             $this->Flash->error(__('The internships application could not be saved. Please, try again.'));
         
     }
+
+    public function APostuler($user, $id){
+        $student = $this->InternshipsStudents->Students->findByUserId($user['id'])->first();
+       
+        $internshipsStudent = $this->InternshipsStudents->find('all', ['conditions' => ['InternshipsStudents.student_id'=> $student['id'], 'InternshipsStudents.internship_id'=> $id]])->first();
+        if($internshipsStudent == null){
+            return true;
+        }else{
+            return false;
+        }
+    }
 	
 	
 }
