@@ -31,9 +31,9 @@ $loguser = $this->request->getSession()->read('Auth.User')
             </tr>
         </thead>
         <tbody>
+        <?php $pasPostuler=true ?>
             <?php foreach ($internshipsStudents as $internshipsStudent): ?>
             <tr>
-            <?php $pasPostuler=true ?>
 			 <?php if($loguser['role'] == 'student' && $loguser['id'] === $internshipsStudent->student->user_id) {?>
                 <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
                 <td class="actions">
@@ -41,6 +41,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                     <?php $pasPostuler = false ?>
                 </td>
 				 <?php }else if($loguser['role'] == 'admin'){ ?> 
+                    <?php $pasPostuler = false ?>
 				 <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
                 <td><?= $internshipsStudent->has('student') ? $this->Html->link($internshipsStudent->student->id, ['controller' => 'Students', 'action' => 'view', $internshipsStudent->student->id]) : '' ?></td>
                 <td class="actions">

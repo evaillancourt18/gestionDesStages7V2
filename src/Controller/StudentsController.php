@@ -18,6 +18,10 @@ class StudentsController extends AppController
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
+        if ( $user['role'] === 'supervisor' && $action === 'view') {
+            return true;
+        }
+
         
         /*
         if (in_array($action, ['add', 'edit'])) {
@@ -69,11 +73,13 @@ class StudentsController extends AppController
      */
     public function edit($id = null)
     {
+        die();
         $student = $this->Students->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $student = $this->Students->patchEntity($student, $this->request->getData());
+            
             if ($this->Students->save($student)) {
                 $this->Flash->success(__('The student has been saved.'));
 

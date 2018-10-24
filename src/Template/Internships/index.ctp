@@ -57,11 +57,14 @@ $loguser = $this->request->getSession()->read('Auth.User');
                     <td><?= h($internship['buildings_type']->name) ?></td>
                     <td><?= h($internship->created) ?></td> 
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $internship->id]) ?>
+                    
+                        <?= $this->Html->link(__('View'), ['action' => 'view', $internship->id]) ?><br/>
                         
                         <?php if($loguser['role'] !== 'student') : ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $internship->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internship->id], ['confirm' => __('Are you sure you want to delete # {0}?', $internship->id)]) ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $internship->id]) ?><br/>
+                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internship->id], ['confirm' => __('Are you sure you want to delete # {0}?', $internship->id)]) ?><br/>
+                        
+                        <?= $this->Html->link(__('View Application'), ['controller' => 'InternshipsStudents', 'action' => 'viewApplication', $internship->id]) ?><br/>
                         <?php endif ?>
                     </td>
                 </tr>

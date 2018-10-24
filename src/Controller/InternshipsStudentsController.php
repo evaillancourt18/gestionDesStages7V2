@@ -14,10 +14,17 @@ class InternshipsStudentsController extends AppController
 {
 
 	public function isAuthorized($user) {
-
-        if($user['role'] === 'student' || $user['role'] === 'admin') {
+        $action = $this->request->getParam('action');
+        if($user['role'] === 'student' && $action == 'postuler' || $action == 'index' ) {
             return true;
         }
+        if($user['role'] === 'supervisor' && $action == 'viewApplication'){
+            return true;
+        }
+        if($user['role'] === 'admin'){
+            return true;
+        }
+
     }
     /**
      * Index method
@@ -82,6 +89,19 @@ class InternshipsStudentsController extends AppController
         }else{
             return false;
         }
+    }
+
+    public function viewApplication ($id){
+        $this->paginate = [
+            'contain' => ['Internships', 'Students']
+        ];
+		$internshipsStudents = $this->paginate($this->InternshipsStudents);
+        $internships = $this->InternshipsStudents->Internships->findById($id)->first();
+        $this->set(compact('internshipsStudents','internships'));
+    }
+
+    public function convoquer($id){
+        
     }
 	
 	
