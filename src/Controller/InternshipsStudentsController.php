@@ -48,9 +48,9 @@ class InternshipsStudentsController extends AppController
 
         $internshipsStudent = $this->InternshipsStudents->findById($id)->first();
         if ($this->InternshipsStudents->delete($internshipsStudent)) {
-            $this->Flash->success(__('The internshipsStudent has been deleted.'));
+            $this->Flash->success(__('The internships application has been deleted.'));
         } else {
-            $this->Flash->error(__('The internshipsStudent could not be deleted. Please, try again.'));
+            $this->Flash->error(__('The internships application could not be deleted. Please, try again.'));
         }
 
         return $this->redirect(['action' => 'index']);

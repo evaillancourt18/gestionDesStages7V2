@@ -33,12 +33,14 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <tbody>
             <?php foreach ($internshipsStudents as $internshipsStudent): ?>
             <tr>
+            <?php $pasPostuler=true ?>
 			 <?php if($loguser['role'] == 'student' && $loguser['id'] === $internshipsStudent->student->user_id) {?>
                 <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $internshipsStudent->id], ['confirm' => __('Are you sure you want to delete # {0}?', $internshipsStudent->internship_id)]) ?>
+                    <?php $pasPostuler = false ?>
                 </td>
-				 <?php }else{ ?> 
+				 <?php }else if($loguser['role'] == 'admin'){ ?> 
 				 <td><?= $internshipsStudent->has('internship') ? $this->Html->link($internshipsStudent->internship->title, ['controller' => 'Internships', 'action' => 'view', $internshipsStudent->internship->id]) : '' ?></td>
                 <td><?= $internshipsStudent->has('student') ? $this->Html->link($internshipsStudent->student->id, ['controller' => 'Students', 'action' => 'view', $internshipsStudent->student->id]) : '' ?></td>
                 <td class="actions">
@@ -47,6 +49,9 @@ $loguser = $this->request->getSession()->read('Auth.User')
 				 <?php } ?>
             </tr>
             <?php endforeach; ?>
+            <?php if($pasPostuler){ ?>
+                <p><?= __('You don\'t have any application yet.') ?></p>
+            <?php } ?>
         </tbody>
     </table>
     <div class="paginator">
