@@ -2,6 +2,9 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
+
+
 
 /**
  * Internships Controller
@@ -91,10 +94,16 @@ class InternshipsController extends AppController
             if ($this->Internships->save($internship)) {
                 $this->Flash->success(__('The internship has been saved.'));
 
+                $users = $this->Internships->Supervisors->Users->find('all' , ['conditions' => ['Users.role' === 'student']])->toArray();
+                $supervisor = $this->Internships->Supervisors->get($internship->supervisor_id, [
+                    'contain' => []
+                ]);
+                
+                foreach($users as $user) {                    
+                    $this->email($user->email, $internship, $supervisor);      
+                }
                 return $this->redirect(['action' => 'index']);
             }
-            
-            
             $this->Flash->error(__('The internship could not be saved. Please, try again.'));
         }
         $buildingsTypes = $this->Internships->BuildingsTypes->find('list', ['limit' => 200]);
@@ -150,5 +159,20 @@ class InternshipsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function email($address, $internship, $supervisor) {
+        $phone = $supervisor->phone;
+        $phone = str_replace('.', '-', $phone);
+        
+        $email = new Email('default');
+        $email->to($address);
+        $email->subject(__('Un nouvel offre de stage est disponible'));
+        $email->send('Titre: ' . $internship->title . "\r\n" . 
+                     'Adresse: ' . $internship->address . "\r\n" .
+                     'Ville: ' . $internship->city . "\r\n" . 
+                     'Description: ' . $internship->description . "\r\n" .
+                     'Téléphone: ' . $phone
+                    );
     }
 }

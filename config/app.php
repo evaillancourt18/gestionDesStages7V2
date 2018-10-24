@@ -1,4 +1,5 @@
 <?php
+use Cake\Mailer\Email;
 return [
     /**
      * Debug Level:
@@ -211,6 +212,21 @@ return [
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+        'smtp' => [
+            'host' => 'ssl://mail.gestiondesstages.ca',
+            'port' => 465,
+            'username' => 'administration@gestiondesstages.ca',
+            'password' => 'gestionstages7',        
+            'className' => 'Smtp',
+            'log' => true,
+            'context' => [
+                'ssl' => [
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                ]
+            ]
+        ]
     ],
 
     /**
@@ -224,8 +240,8 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'default',
-            'from' => 'you@localhost',
+            'transport' => 'smtp',
+            'from' => 'administration@gestiondesstages.ca',
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],

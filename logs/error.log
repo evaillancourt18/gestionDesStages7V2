@@ -13732,6 +13732,13 @@ Stack Trace:
 #17 {main}
 
 
+<<<<<<< HEAD
+2018-10-17 18:52:27 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php line=853 in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 48]
+Request URL: /internships/add/19
+Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+=======
 2018-10-17 18:22:02 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "internships_students" with primary key ['2']
 Request URL: /internships-students/delete/2
 Referer URL: http://localhost/gestionDesStages7V2/internships-students
@@ -13921,18 +13928,27 @@ Referer URL: http://localhost/gestionDesStages7V2/internships-students
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 48
 Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
 [main] - ROOT\webroot\index.php, line 40
 
 
 
+<<<<<<< HEAD
+2018-10-17 18:52:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
+Request URL: /internships/add/19
+Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+=======
 2018-10-17 18:57:04 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 148]
 Request URL: /internships-students/delete/2/5
 Referer URL: http://localhost/gestionDesStages7V2/internships-students
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 header - [internal], line ??
 Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 148
 Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 54
@@ -13941,12 +13957,20 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
 
 
 
+<<<<<<< HEAD
+2018-10-17 18:52:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /internships/add/19
+Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+=======
 2018-10-17 18:57:04 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
 Request URL: /internships-students/delete/2/5
 Referer URL: http://localhost/gestionDesStages7V2/internships-students
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 header - [internal], line ??
 Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
 Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
@@ -13955,12 +13979,20 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
 
 
 
+<<<<<<< HEAD
+2018-10-17 18:52:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /internships/add/19
+Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+=======
 2018-10-17 18:57:04 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
 Request URL: /internships-students/delete/2/5
 Referer URL: http://localhost/gestionDesStages7V2/internships-students
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 header - [internal], line ??
 Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
 Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
@@ -13969,12 +14001,20 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
 
 
 
+<<<<<<< HEAD
+2018-10-17 18:52:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
+Request URL: /internships/add/19
+Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+=======
 2018-10-17 18:57:04 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Debugger.php:853) in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 181]
 Request URL: /internships-students/delete/2/5
 Referer URL: http://localhost/gestionDesStages7V2/internships-students
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 header - [internal], line ??
 Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 181
 Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
@@ -13983,6 +14023,16 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
 
 
 
+<<<<<<< HEAD
+2018-10-17 19:03:09 Error: [RuntimeException] Table "App\Model\Table\UsersTable" is not associated with "email"
+Request URL: /internships/add/19
+Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php(108): Cake\ORM\Table->__get('email')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\InternshipsController->add('19')
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+=======
 2018-10-17 18:57:21 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "internships_students" with primary key ['2']
 Request URL: /internships-students/view/2
 Referer URL: http://localhost/gestionDesStages7V2/internships-students
@@ -13991,6 +14041,7 @@ Stack Trace:
 #1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\InternshipsStudentsController->view('2')
 #2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
 #3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsStudentsController))
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 #4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
 #5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
 #6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
@@ -14009,6 +14060,77 @@ Stack Trace:
 #19 {main}
 
 
+<<<<<<< HEAD
+2018-10-17 19:06:34 Error: [Cake\Network\Exception\SocketException] SMTP server did not accept the password.
+Request URL: /internships/add/19
+Referer URL: http://localhost/gestionDesStages7V2/internships/add/19
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Mailer\Transport\SmtpTransport.php(163): Cake\Mailer\Transport\SmtpTransport->_auth()
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Mailer\Transport\DebugKitTransport.php(79): Cake\Mailer\Transport\SmtpTransport->send(Object(Cake\Mailer\Email))
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Mailer\Email.php(2170): DebugKit\Mailer\Transport\DebugKitTransport->send(Object(Cake\Mailer\Email))
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php(187): Cake\Mailer\Email->send('Test Email\\nRue...')
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php(114): App\Controller\InternshipsController->email('test@mail.com', Object(App\Model\Entity\Internship), Object(App\Model\Entity\Supervisor))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\InternshipsController->add('19')
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#23 {main}
+
+
+2018-10-17 19:23:16 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestiondestage.internships_students' doesn't exist
+Request URL: /internships/delete/18
+Referer URL: http://localhost/gestionDesStages7V2/internships
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'internships_stu...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('internships_stu...', Array)
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('internships_stu...')
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Query.php(271): Cake\ORM\Table->getSchema()
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\InternshipsStudentsTable))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(1758): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\InternshipsStudentsTable))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(1781): Cake\ORM\Table->query()
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Association\BelongsToMany.php(620): Cake\ORM\Table->deleteAll(Array)
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\AssociationCollection.php(336): Cake\ORM\Association\BelongsToMany->cascadeDelete(Object(App\Model\Entity\Internship), Array)
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(2354): Cake\ORM\AssociationCollection->cascadeDelete(Object(App\Model\Entity\Internship), Array)
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(2282): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\Internship), Object(ArrayObject))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(1627): Cake\ORM\Table->Cake\ORM\{closure}()
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Database\Connection.php(726): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(1628): Cake\Database\Connection->transactional(Object(Closure))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\ORM\Table.php(2283): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\InternshipsController.php(155): Cake\ORM\Table->delete(Object(App\Model\Entity\Internship))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\InternshipsController->delete('18')
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\InternshipsController))
+#19 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#29 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#31 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#32 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
+#34 {main}
+=======
 2018-10-17 19:23:57 Error: [RuntimeException] Unable to locate an object compatible with paginate.
 Request URL: /internships-students
 Referer URL: http://localhost/gestionDesStages7V2/users/login?redirect=%2Finternships-students
@@ -14744,6 +14866,7 @@ Stack Trace:
 #17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
 #18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\webroot\index.php(40): Cake\Http\Server->run()
 #19 {main}
+>>>>>>> 6595c3130a5bb17fad649258a4358cfae4c38f30
 
 
 2018-10-24 17:41:19 Error: [Error] Class 'App\Controller\InternshipsStundentsController' not found
