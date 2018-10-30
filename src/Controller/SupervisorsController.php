@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
 
 /**
  * Supervisors Controller
@@ -11,6 +12,12 @@ use App\Controller\AppController;
  * @method \App\Model\Entity\Supervisor[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class SupervisorsController extends AppController {
+
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['verifyEdited']);
+    }
+
 
     /**
      * Index method
@@ -121,5 +128,30 @@ class SupervisorsController extends AppController {
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function verifyEdited() {
+        $supervisors = $this->Supervisors->find('all', ['conditions' => ['Supervisors.edit' => 0]]);
+
+        foreach($supervisors as $supervisor) {
+            $date = date('Y-m-d');
+
+            $dateDiff = strtotime($date) - strtotime($supervisor->modified);
+
+            $result = round($dateDiff / (60*60*24));
+
+            if($result >= 15) {
+                $this->email($supervisor->email);
+            }
+        }
+
+        $this->autoRender = false;
+    }
+
+    public function email($address) {
+        $email = new Email('default');
+        $email->to($address);
+        $email->subject(__("Votre compte n'a pas été modifié depuis 15 jours."));
+        $email->send("Veuillez mettre à jour vos informations afin d'assurer la véracité de nos dossiers.");
     }
 }

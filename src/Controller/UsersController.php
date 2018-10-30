@@ -291,5 +291,4 @@ class UsersController extends AppController {
             }
         }
     }
-
 }

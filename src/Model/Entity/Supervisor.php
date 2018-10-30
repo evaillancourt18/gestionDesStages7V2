@@ -53,6 +53,8 @@ class Supervisor extends Entity
         'cellphone' => true,
         'fax' => true,
         'slug' => true,
-        'internships' => true
+        'internships' => true,
+        'modified' => true,
+        'edit' => true
     ];
 }

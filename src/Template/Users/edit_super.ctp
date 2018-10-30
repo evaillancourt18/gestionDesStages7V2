@@ -36,6 +36,7 @@
             echo $this->Form->control('fax');
             echo $this->Form->control('email');
             echo $this->Form->control('password');
+            echo $this->Form->hidden('edit', ['value' => '1']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

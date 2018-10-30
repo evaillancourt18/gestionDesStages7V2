@@ -23,6 +23,9 @@
     <fieldset>
         <legend><?= __('Edit Supervisor') ?></legend>
         <?php
+            $supervisor->phone = str_replace(".", "-", $supervisor->phone);
+            $supervisor->cellphone = str_replace(".", "-", $supervisor->cellphone);
+            $supervisor->fax = str_replace(".", "-", $supervisor->fax);
             echo $this->Form->control('gender');
             echo $this->Form->control('first_name');
             echo $this->Form->control('last_name');
@@ -37,6 +40,7 @@
             echo $this->Form->control('extension');
             echo $this->Form->control('cellphone');
             echo $this->Form->control('fax');
+            echo $this->Form->hidden('edit', ['value' => '1']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
