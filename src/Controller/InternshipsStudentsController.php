@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
 
 /**
  * InternshipsStudents Controller
@@ -14,10 +15,17 @@ class InternshipsStudentsController extends AppController
 {
 
 	public function isAuthorized($user) {
-
-        if($user['role'] === 'student' || $user['role'] === 'admin') {
+        $action = $this->request->getParam('action');
+        if($user['role'] === 'student' && $action == 'postuler' || $action == 'index' ) {
             return true;
         }
+        if($user['role'] === 'supervisor' && ($action == 'viewApplication' || $action == 'convoquer') ){
+            return true;
+        }
+        if($user['role'] === 'admin'){
+            return true;
+        }
+
     }
     /**
      * Index method
@@ -82,6 +90,35 @@ class InternshipsStudentsController extends AppController
         }else{
             return false;
         }
+    }
+
+    public function viewApplication ($id){
+        $this->paginate = [
+            'contain' => ['Internships', 'Students']
+        ];
+		$internshipsStudents = $this->paginate($this->InternshipsStudents);
+        $internships = $this->InternshipsStudents->Internships->findById($id)->first();
+        $this->set(compact('internshipsStudents','internships'));
+    }
+
+    public function convoquer($id){
+        $InternshipsStudents = $this->InternshipsStudents->findById($id)->first();
+        $student = $this->InternshipsStudents->Students->findById($InternshipsStudents['student_id'])->first();
+        $user = $this->InternshipsStudents->Students->Users->findById($student['user_id'])->first();
+        $internship = $this->InternshipsStudents->Internships->findById($InternshipsStudents['internship_id'])->first();
+        $email = new Email('default');
+        $email->to($user['email']);
+        $email->subject(__('Vous avez été convoquer pour une entrevue'));
+        $email->send('Titre: ' . $internship->title . "\r\n" . 
+                     'Adresse: ' . $internship->address . "\r\n" .
+                     'Ville: ' . $internship->city . "\r\n" . 
+                     'Description: ' . $internship->description 
+                    );
+
+
+        return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
+                    
+        
     }
 	
 	

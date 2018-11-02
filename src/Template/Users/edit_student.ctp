@@ -24,12 +24,12 @@ $role = $loguser['role'];
     <fieldset>
         <legend><?= __('Edit student') ?></legend>
         <?php
-        echo $this->Form->control('student_number');
+        echo $this->Form->hidden('student_number');
         echo $this->Form->control('last_name');
         echo $this->Form->control('first_name');
         echo $this->Form->control('phone');
         echo $this->Form->control('grade');
-        echo $this->Form->control('email', ['type' => 'email']);
+        echo $this->Form->hidden('email', ['type' => 'email']);
         echo $this->Form->control('info', ['type' => 'text', 'label' => __('Additional information')]);
         ?>
     </fieldset>
