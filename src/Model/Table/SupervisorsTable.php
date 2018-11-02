@@ -131,6 +131,14 @@ class SupervisorsTable extends Table
         return $validator;
     }
 
+    public function findEdited(Query $query, array $options){
+        $query->where([
+            $this->alias(). '.edit' => 1
+        ]);
+
+        return $query;
+    }
+
     /**
      * Returns a rules checker object that will be used for validating
      * application integrity.
