@@ -17,8 +17,7 @@ class MissionsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.missions',
-        'app.internships',
-        'app.internships_missions'
+        'app.internships'
     ];
 
     /**

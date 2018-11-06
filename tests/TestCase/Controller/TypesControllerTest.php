@@ -17,8 +17,7 @@ class TypesControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.types',
-        'app.internships',
-        'app.internships_types'
+        'app.internships'
     ];
 
     /**

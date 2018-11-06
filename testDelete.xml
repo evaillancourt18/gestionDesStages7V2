@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="App\Test\TestCase\Controller\StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.180025">
+    <testcase name="testDelete" class="App\Test\TestCase\Controller\StudentsControllerTest" classname="App.Test.TestCase.Controller.StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" line="136" assertions="4" time="0.180025"/>
+  </testsuite>
+</testsuites>

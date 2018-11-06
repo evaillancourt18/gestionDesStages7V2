@@ -16,7 +16,7 @@ class MissionsTableTest extends TestCase
      *
      * @var \App\Model\Table\MissionsTable
      */
-    public $Missions;
+    public $MissionsTable;
 
     /**
      * Fixtures
@@ -37,7 +37,7 @@ class MissionsTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Missions') ? [] : ['className' => MissionsTable::class];
-        $this->Missions = TableRegistry::getTableLocator()->get('Missions', $config);
+        $this->MissionsTable = TableRegistry::getTableLocator()->get('Missions', $config);
     }
 
     /**
@@ -47,7 +47,7 @@ class MissionsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Missions);
+        unset($this->MissionsTable);
 
         parent::tearDown();
     }

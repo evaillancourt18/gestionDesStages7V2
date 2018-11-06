@@ -33,7 +33,7 @@ class SupervisorsFixture extends TestFixture
         'extension' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'cellphone' => ['type' => 'string', 'length' => 12, 'null' => true, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'fax' => ['type' => 'string', 'length' => 12, 'null' => true, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'edit' => ['type' => 'tinyinteger', 'length' => 4, 'unsigned' => false, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
         '_indexes' => [
             'user_id' => ['type' => 'index', 'columns' => ['user_id'], 'length' => []],
@@ -58,45 +58,25 @@ class SupervisorsFixture extends TestFixture
     {
         $this->records = [
             [
-                'id' => 3,
-                'user_id' => 17,
-                'gender' => 'Male',
-                'first_name' => 'Roger',
-                'last_name' => 'Michel',
-                'title' => 'test',
-                'location' => 'Rue Test',
-                'address' => 'Test 1',
-                'city' => 'Test1000',
-                'province' => 'Test',
-                'postal_code' => 'Test',
-                'email' => 'michel@mail.com',
-                'phone' => '450.111.1111',
-                'extension' => '1114',
-                'cellphone' => '450.111.1117',
-                'fax' => '450.111.1112',
-                'modified' => null,
-                'edit' => true
+                'id' => 1,
+                'user_id' => 1,
+                'gender' => 'Lorem ipsum dolor sit amet',
+                'first_name' => 'Lorem ipsum dolor sit amet',
+                'last_name' => 'Lorem ipsum dolor sit amet',
+                'title' => 'Lorem ipsum dolor sit amet',
+                'location' => 'Lorem ipsum dolor sit amet',
+                'address' => 'Lorem ipsum dolor sit amet',
+                'city' => 'Lorem ipsum dolor sit amet',
+                'province' => 'Lorem ipsum dolor sit amet',
+                'postal_code' => 'Lorem',
+                'email' => 'Lorem ipsum dolor sit amet',
+                'phone' => 'Lorem ipsu',
+                'extension' => 'Lorem ipsum dolor sit amet',
+                'cellphone' => 'Lorem ipsu',
+                'fax' => 'Lorem ipsu',
+                'modified' => '2018-11-06 16:26:41',
+                'edit' => 1
             ],
-            [
-                'id' => 5,
-                'user_id' => 19,
-                'gender' => 'Female',
-                'first_name' => 'Mary',
-                'last_name' => 'Popins',
-                'title' => 'Bell',
-                'location' => 'Canada',
-                'address' => '111 Rue Test',
-                'city' => 'Montréal',
-                'province' => 'Québec',
-                'postal_code' => 'H2A2A2',
-                'email' => 'et_202@hotmail.com',
-                'phone' => '450.222.2222',
-                'extension' => '444',
-                'cellphone' => '450.222.2222',
-                'fax' => '450.222.2222',
-                'modified' => null,
-                'edit' => true
-            ]
         ];
         parent::init();
     }

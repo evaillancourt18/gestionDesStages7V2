@@ -16,7 +16,8 @@ class BuildingsTypesControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.buildings_types'
+        'app.buildings_types',
+        'app.internships'
     ];
 
     /**
