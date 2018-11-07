@@ -16,7 +16,7 @@ class InternshipsTypesTableTest extends TestCase
      *
      * @var \App\Model\Table\InternshipsTypesTable
      */
-    public $InternshipsTypes;
+    public $InternshipsTypesTable;
 
     /**
      * Fixtures
@@ -38,7 +38,7 @@ class InternshipsTypesTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('InternshipsTypes') ? [] : ['className' => InternshipsTypesTable::class];
-        $this->InternshipsTypes = TableRegistry::getTableLocator()->get('InternshipsTypes', $config);
+        $this->InternshipsTypesTable = TableRegistry::getTableLocator()->get('InternshipsTypes', $config);
     }
 
     /**
@@ -48,7 +48,7 @@ class InternshipsTypesTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->InternshipsTypes);
+        unset($this->InternshipsTypesTable);
 
         parent::tearDown();
     }

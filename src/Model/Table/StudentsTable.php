@@ -111,4 +111,11 @@ class StudentsTable extends Table
 
         return $rules;
     }
+
+    public function findActif (Query $query, array $options) {
+        $query->where([
+            $this->alias() . '.actif' => 1
+        ]);
+        return $query;
+    }
 }

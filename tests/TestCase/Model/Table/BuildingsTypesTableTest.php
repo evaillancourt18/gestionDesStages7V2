@@ -16,7 +16,7 @@ class BuildingsTypesTableTest extends TestCase
      *
      * @var \App\Model\Table\BuildingsTypesTable
      */
-    public $BuildingsTypes;
+    public $BuildingsTypesTable;
 
     /**
      * Fixtures
@@ -24,7 +24,8 @@ class BuildingsTypesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.buildings_types'
+        'app.buildings_types',
+        'app.internships'
     ];
 
     /**
@@ -36,7 +37,7 @@ class BuildingsTypesTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('BuildingsTypes') ? [] : ['className' => BuildingsTypesTable::class];
-        $this->BuildingsTypes = TableRegistry::getTableLocator()->get('BuildingsTypes', $config);
+        $this->BuildingsTypesTable = TableRegistry::getTableLocator()->get('BuildingsTypes', $config);
     }
 
     /**
@@ -46,7 +47,7 @@ class BuildingsTypesTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->BuildingsTypes);
+        unset($this->BuildingsTypesTable);
 
         parent::tearDown();
     }

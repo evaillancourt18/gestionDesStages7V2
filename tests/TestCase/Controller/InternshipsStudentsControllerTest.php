@@ -1,13 +1,13 @@
 <?php
 namespace App\Test\TestCase\Controller;
 
-use App\Controller\InternshipsstudentsController;
+use App\Controller\InternshipsStudentsController;
 use Cake\TestSuite\IntegrationTestCase;
 
 /**
- * App\Controller\InternshipsstudentsController Test Case
+ * App\Controller\InternshipsStudentsController Test Case
  */
-class InternshipsstudentsControllerTest extends IntegrationTestCase
+class InternshipsStudentsControllerTest extends IntegrationTestCase
 {
 
     /**
@@ -16,10 +16,20 @@ class InternshipsstudentsControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.internshipsstudents',
+        'app.internships_students',
         'app.internships',
         'app.students'
     ];
+
+    /**
+     * Test isAuthorized method
+     *
+     * @return void
+     */
+    public function testIsAuthorized()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test index method
@@ -32,41 +42,31 @@ class InternshipsstudentsControllerTest extends IntegrationTestCase
     }
 
     /**
-     * Test view method
-     *
-     * @return void
-     */
-    public function testView()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test add method
-     *
-     * @return void
-     */
-    public function testAdd()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test edit method
-     *
-     * @return void
-     */
-    public function testEdit()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
      * Test delete method
      *
      * @return void
      */
     public function testDelete()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test postuler method
+     *
+     * @return void
+     */
+    public function testPostuler()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test APostuler method
+     *
+     * @return void
+     */
+    public function testAPostuler()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

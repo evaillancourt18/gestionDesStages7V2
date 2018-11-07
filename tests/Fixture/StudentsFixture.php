@@ -18,7 +18,7 @@ class StudentsFixture extends TestFixture
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'user_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'user_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'student_number' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'last_name' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'first_name' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
@@ -26,13 +26,13 @@ class StudentsFixture extends TestFixture
         'info' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null],
         'grade' => ['type' => 'decimal', 'length' => 3, 'precision' => 0, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         'actif' => ['type' => 'boolean', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-        'slug' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
             'user_id' => ['type' => 'index', 'columns' => ['user_id'], 'length' => []],
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'students_ibfk_1' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['users', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'student_number' => ['type' => 'unique', 'columns' => ['student_number'], 'length' => []],
+            'students_ibfk_1' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['users', 'id'], 'update' => 'cascade', 'delete' => 'setNull', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -52,14 +52,35 @@ class StudentsFixture extends TestFixture
             [
                 'id' => 1,
                 'user_id' => 1,
-                'student_number' => 1,
-                'last_name' => 'Lorem ipsum dolor sit amet',
-                'first_name' => 'Lorem ipsum dolor sit amet',
-                'phone' => 'Lorem ipsu',
-                'info' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-                'grade' => 1.5,
-                'actif' => 1,
-                'slug' => 'Lorem ipsum dolor sit amet'
+                'student_number' => 111111111,
+                'last_name' => 'Test One',
+                'first_name' => 'Test One',
+                'phone' => '450-111-1111',
+                'info' => 'Test',
+                'grade' => 1,
+                'actif' => 1
+            ],
+            [
+                'id' => 2,
+                'user_id' => 1,
+                'student_number' => 222222222,
+                'last_name' => 'Test Two',
+                'first_name' => 'Test Two',
+                'phone' => '450-222-2222',
+                'info' => 'Test',
+                'grade' => 1,
+                'actif' => 0
+            ],
+            [
+                'id' => 3,
+                'user_id' => 1,
+                'student_number' => 333333333,
+                'last_name' => 'Test Three',
+                'first_name' => 'Test Three',
+                'phone' => '450-333-3333',
+                'info' => 'Test',
+                'grade' => 1,
+                'actif' => 1
             ],
         ];
         parent::init();

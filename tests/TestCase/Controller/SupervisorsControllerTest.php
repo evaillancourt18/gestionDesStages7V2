@@ -17,8 +17,19 @@ class SupervisorsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.supervisors',
-        'app.internships'
+        'app.internships',
+        'app.users'
     ];
+
+    /**
+     * Test initialize method
+     *
+     * @return void
+     */
+    public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test index method
@@ -26,6 +37,16 @@ class SupervisorsControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testIndex()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test isAuthorized method
+     *
+     * @return void
+     */
+    public function testIsAuthorized()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
@@ -66,6 +87,26 @@ class SupervisorsControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testDelete()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test verifyEdited method
+     *
+     * @return void
+     */
+    public function testVerifyEdited()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test email method
+     *
+     * @return void
+     */
+    public function testEmail()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

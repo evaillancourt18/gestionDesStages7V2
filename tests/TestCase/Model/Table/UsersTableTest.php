@@ -16,7 +16,7 @@ class UsersTableTest extends TestCase
      *
      * @var \App\Model\Table\UsersTable
      */
-    public $Users;
+    public $UsersTable;
 
     /**
      * Fixtures
@@ -25,7 +25,9 @@ class UsersTableTest extends TestCase
      */
     public $fixtures = [
         'app.users',
-        'app.students'
+        'app.students',
+        'app.supervisors',
+        'app.admins'
     ];
 
     /**
@@ -37,7 +39,7 @@ class UsersTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Users') ? [] : ['className' => UsersTable::class];
-        $this->Users = TableRegistry::getTableLocator()->get('Users', $config);
+        $this->UsersTable = TableRegistry::getTableLocator()->get('Users', $config);
     }
 
     /**
@@ -47,7 +49,7 @@ class UsersTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Users);
+        unset($this->UsersTable);
 
         parent::tearDown();
     }
@@ -78,6 +80,16 @@ class UsersTableTest extends TestCase
      * @return void
      */
     public function testBuildRules()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test getSessionUser method
+     *
+     * @return void
+     */
+    public function testGetSessionUser()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

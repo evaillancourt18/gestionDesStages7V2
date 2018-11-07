@@ -16,7 +16,7 @@ class SupervisorsTableTest extends TestCase
      *
      * @var \App\Model\Table\SupervisorsTable
      */
-    public $Supervisors;
+    public $SupervisorsTable;
 
     /**
      * Fixtures
@@ -25,7 +25,8 @@ class SupervisorsTableTest extends TestCase
      */
     public $fixtures = [
         'app.supervisors',
-        'app.internships'
+        'app.internships',
+        'app.users'
     ];
 
     /**
@@ -37,7 +38,7 @@ class SupervisorsTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Supervisors') ? [] : ['className' => SupervisorsTable::class];
-        $this->Supervisors = TableRegistry::getTableLocator()->get('Supervisors', $config);
+        $this->SupervisorsTable = TableRegistry::getTableLocator()->get('Supervisors', $config);
     }
 
     /**
@@ -47,7 +48,7 @@ class SupervisorsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Supervisors);
+        unset($this->SupervisorsTable);
 
         parent::tearDown();
     }
@@ -73,11 +74,11 @@ class SupervisorsTableTest extends TestCase
     }
 
     /**
-     * Test buildRules method
+     * Test findEdited method
      *
      * @return void
      */
-    public function testBuildRules()
+    public function testFindEdited()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

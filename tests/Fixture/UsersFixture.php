@@ -41,9 +41,9 @@ class UsersFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'email' => 'Lorem ipsum dolor sit amet',
-                'password' => 'Lorem ipsum dolor sit amet',
-                'role' => 'Lorem ipsum dolor sit amet'
+                'email' => 'admin@mail.com',
+                'password' => 'admin',
+                'role' => 'admin'
             ],
         ];
         parent::init();

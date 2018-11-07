@@ -16,7 +16,7 @@ class AdminsTableTest extends TestCase
      *
      * @var \App\Model\Table\AdminsTable
      */
-    public $Admins;
+    public $AdminsTable;
 
     /**
      * Fixtures
@@ -36,7 +36,7 @@ class AdminsTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Admins') ? [] : ['className' => AdminsTable::class];
-        $this->Admins = TableRegistry::getTableLocator()->get('Admins', $config);
+        $this->AdminsTable = TableRegistry::getTableLocator()->get('Admins', $config);
     }
 
     /**
@@ -46,7 +46,7 @@ class AdminsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Admins);
+        unset($this->AdminsTable);
 
         parent::tearDown();
     }
@@ -67,16 +67,6 @@ class AdminsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

@@ -20,9 +20,29 @@ class InternshipsControllerTest extends IntegrationTestCase
         'app.supervisors',
         'app.missions',
         'app.types',
-        'app.internships_missions',
-        'app.internships_types'
+        'app.buildings_types',
+        'app.students'
     ];
+
+    /**
+     * Test initialize method
+     *
+     * @return void
+     */
+    public function testInitialize()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test isAuthorized method
+     *
+     * @return void
+     */
+    public function testIsAuthorized()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test index method
@@ -70,6 +90,16 @@ class InternshipsControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testDelete()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test email method
+     *
+     * @return void
+     */
+    public function testEmail()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }
