@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\src/Controller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../.css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../.css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../.css/style.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="../.js/html5shiv.min.js"></script>
+  <script src="../.js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\src</a></li>
+        <li><a href="index.html">Controller</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="AdminsController.php.html#13">App\Controller\AdminsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#13">App\Controller\BuildingsTypesController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#16">App\Controller\InternshipsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#13">App\Controller\InternshipsMissionsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#14">App\Controller\InternshipsStudentsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#13">App\Controller\InternshipsTypesController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MissionsController.php.html#13">App\Controller\MissionsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#14">App\Controller\SupervisorsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypesController.php.html#13">App\Controller\TypesController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#14">App\Controller\UsersController</a></td><td class="text-right">5%</td></tr>
+       <tr><td><a href="AppController.php.html#28">App\Controller\AppController</a></td><td class="text-right">69%</td></tr>
+       <tr><td><a href="StudentsController.php.html#13">App\Controller\StudentsController</a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="PagesController.php.html#30">App\Controller\PagesController</a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="UsersController.php.html#14">App\Controller\UsersController</a></td><td class="text-right">1531</td></tr>
+       <tr><td><a href="InternshipsController.php.html#16">App\Controller\InternshipsController</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#14">App\Controller\SupervisorsController</a></td><td class="text-right">380</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#14">App\Controller\InternshipsStudentsController</a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="AdminsController.php.html#13">App\Controller\AdminsController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#13">App\Controller\BuildingsTypesController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#13">App\Controller\InternshipsMissionsController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#13">App\Controller\InternshipsTypesController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="MissionsController.php.html#13">App\Controller\MissionsController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="TypesController.php.html#13">App\Controller\TypesController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="StudentsController.php.html#13">App\Controller\StudentsController</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="PagesController.php.html#30">App\Controller\PagesController</a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="AppController.php.html#28">App\Controller\AppController</a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="AdminsController.php.html#21"><abbr title="App\Controller\AdminsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypesController.php.html#35"><abbr title="App\Controller\TypesController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminsController.php.html#35"><abbr title="App\Controller\AdminsController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MissionsController.php.html#49"><abbr title="App\Controller\MissionsController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MissionsController.php.html#72"><abbr title="App\Controller\MissionsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MissionsController.php.html#97"><abbr title="App\Controller\MissionsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#16"><abbr title="App\Controller\SupervisorsController::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#27"><abbr title="App\Controller\SupervisorsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#33"><abbr title="App\Controller\SupervisorsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#59"><abbr title="App\Controller\SupervisorsController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#73"><abbr title="App\Controller\SupervisorsController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#96"><abbr title="App\Controller\SupervisorsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#120"><abbr title="App\Controller\SupervisorsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#133"><abbr title="App\Controller\SupervisorsController::verifyEdited">verifyEdited</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#151"><abbr title="App\Controller\SupervisorsController::email">email</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypesController.php.html#21"><abbr title="App\Controller\TypesController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypesController.php.html#49"><abbr title="App\Controller\TypesController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#102"><abbr title="App\Controller\InternshipsTypesController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#127"><abbr title="App\Controller\UsersController::editStudent">editStudent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#265"><abbr title="App\Controller\UsersController::verifyAndSaveStudent">verifyAndSaveStudent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#247"><abbr title="App\Controller\UsersController::saveUserSupervisor">saveUserSupervisor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#239"><abbr title="App\Controller\UsersController::verifyAndSaveSupervisor">verifyAndSaveSupervisor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#227"><abbr title="App\Controller\UsersController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#181"><abbr title="App\Controller\UsersController::editSuper">editSuper</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#156"><abbr title="App\Controller\UsersController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#105"><abbr title="App\Controller\UsersController::addSuper">addSuper</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypesController.php.html#72"><abbr title="App\Controller\TypesController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#77"><abbr title="App\Controller\UsersController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#64"><abbr title="App\Controller\UsersController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#53"><abbr title="App\Controller\UsersController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#42"><abbr title="App\Controller\UsersController::login">login</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#21"><abbr title="App\Controller\UsersController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TypesController.php.html#97"><abbr title="App\Controller\TypesController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MissionsController.php.html#21"><abbr title="App\Controller\MissionsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="MissionsController.php.html#35"><abbr title="App\Controller\MissionsController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#76"><abbr title="App\Controller\InternshipsTypesController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#95"><abbr title="App\Controller\BuildingsTypesController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#124"><abbr title="App\Controller\InternshipsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#90"><abbr title="App\Controller\InternshipsController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#74"><abbr title="App\Controller\InternshipsController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#57"><abbr title="App\Controller\InternshipsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#24"><abbr title="App\Controller\InternshipsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#18"><abbr title="App\Controller\InternshipsController::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#71"><abbr title="App\Controller\BuildingsTypesController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#164"><abbr title="App\Controller\InternshipsController::email">email</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#49"><abbr title="App\Controller\BuildingsTypesController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#35"><abbr title="App\Controller\BuildingsTypesController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#21"><abbr title="App\Controller\BuildingsTypesController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppController.php.html#30"><abbr title="App\Controller\AppController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminsController.php.html#95"><abbr title="App\Controller\AdminsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminsController.php.html#71"><abbr title="App\Controller\AdminsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AdminsController.php.html#49"><abbr title="App\Controller\AdminsController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsController.php.html#151"><abbr title="App\Controller\InternshipsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#21"><abbr title="App\Controller\InternshipsMissionsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#52"><abbr title="App\Controller\InternshipsTypesController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#84"><abbr title="App\Controller\InternshipsStudentsController::APostuler">APostuler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#38"><abbr title="App\Controller\InternshipsTypesController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#21"><abbr title="App\Controller\InternshipsTypesController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#104"><abbr title="App\Controller\InternshipsStudentsController::convoquer">convoquer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#95"><abbr title="App\Controller\InternshipsStudentsController::viewApplication">viewApplication</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#38"><abbr title="App\Controller\InternshipsMissionsController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="UsersController.php.html#279"><abbr title="App\Controller\UsersController::saveUserStudent">saveUserStudent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#67"><abbr title="App\Controller\InternshipsStudentsController::postuler">postuler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#53"><abbr title="App\Controller\InternshipsStudentsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#35"><abbr title="App\Controller\InternshipsStudentsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#17"><abbr title="App\Controller\InternshipsStudentsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#102"><abbr title="App\Controller\InternshipsMissionsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#76"><abbr title="App\Controller\InternshipsMissionsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#52"><abbr title="App\Controller\InternshipsMissionsController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="StudentsController.php.html#15"><abbr title="App\Controller\StudentsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="UsersController.php.html#90"><abbr title="App\Controller\UsersController::addStudent">addStudent</abbr></a></td><td class="text-right">62%</td></tr>
+       <tr><td><a href="StudentsController.php.html#74"><abbr title="App\Controller\StudentsController::edit">edit</abbr></a></td><td class="text-right">70%</td></tr>
+       <tr><td><a href="StudentsController.php.html#99"><abbr title="App\Controller\StudentsController::delete">delete</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="PagesController.php.html#42"><abbr title="App\Controller\PagesController::display">display</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="InternshipsController.php.html#24"><abbr title="App\Controller\InternshipsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#17"><abbr title="App\Controller\InternshipsStudentsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="UsersController.php.html#21"><abbr title="App\Controller\UsersController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#33"><abbr title="App\Controller\SupervisorsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="UsersController.php.html#181"><abbr title="App\Controller\UsersController::editSuper">editSuper</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="UsersController.php.html#156"><abbr title="App\Controller\UsersController::edit">edit</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="UsersController.php.html#127"><abbr title="App\Controller\UsersController::editStudent">editStudent</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="InternshipsController.php.html#90"><abbr title="App\Controller\InternshipsController::add">add</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#133"><abbr title="App\Controller\SupervisorsController::verifyEdited">verifyEdited</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AdminsController.php.html#71"><abbr title="App\Controller\AdminsController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#73"><abbr title="App\Controller\SupervisorsController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#96"><abbr title="App\Controller\SupervisorsController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AdminsController.php.html#49"><abbr title="App\Controller\AdminsController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TypesController.php.html#49"><abbr title="App\Controller\TypesController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TypesController.php.html#72"><abbr title="App\Controller\TypesController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="MissionsController.php.html#49"><abbr title="App\Controller\MissionsController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="UsersController.php.html#42"><abbr title="App\Controller\UsersController::login">login</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="UsersController.php.html#247"><abbr title="App\Controller\UsersController::saveUserSupervisor">saveUserSupervisor</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="UsersController.php.html#265"><abbr title="App\Controller\UsersController::verifyAndSaveStudent">verifyAndSaveStudent</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="MissionsController.php.html#72"><abbr title="App\Controller\MissionsController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="UsersController.php.html#279"><abbr title="App\Controller\UsersController::saveUserStudent">saveUserStudent</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#52"><abbr title="App\Controller\InternshipsMissionsController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#76"><abbr title="App\Controller\InternshipsMissionsController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#49"><abbr title="App\Controller\BuildingsTypesController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#52"><abbr title="App\Controller\InternshipsTypesController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#71"><abbr title="App\Controller\BuildingsTypesController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="InternshipsController.php.html#124"><abbr title="App\Controller\InternshipsController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#76"><abbr title="App\Controller\InternshipsTypesController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#67"><abbr title="App\Controller\InternshipsStudentsController::postuler">postuler</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="StudentsController.php.html#15"><abbr title="App\Controller\StudentsController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="PagesController.php.html#42"><abbr title="App\Controller\PagesController::display">display</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="SupervisorsController.php.html#120"><abbr title="App\Controller\SupervisorsController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="BuildingsTypesController.php.html#95"><abbr title="App\Controller\BuildingsTypesController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AdminsController.php.html#95"><abbr title="App\Controller\AdminsController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AppController.php.html#30"><abbr title="App\Controller\AppController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UsersController.php.html#239"><abbr title="App\Controller\UsersController::verifyAndSaveSupervisor">verifyAndSaveSupervisor</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UsersController.php.html#227"><abbr title="App\Controller\UsersController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="MissionsController.php.html#97"><abbr title="App\Controller\MissionsController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="UsersController.php.html#105"><abbr title="App\Controller\UsersController::addSuper">addSuper</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="InternshipsMissionsController.php.html#102"><abbr title="App\Controller\InternshipsMissionsController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="InternshipsController.php.html#151"><abbr title="App\Controller\InternshipsController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="TypesController.php.html#97"><abbr title="App\Controller\TypesController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#84"><abbr title="App\Controller\InternshipsStudentsController::APostuler">APostuler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="InternshipsStudentsController.php.html#53"><abbr title="App\Controller\InternshipsStudentsController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="InternshipsTypesController.php.html#102"><abbr title="App\Controller\InternshipsTypesController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="StudentsController.php.html#74"><abbr title="App\Controller\StudentsController::edit">edit</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="UsersController.php.html#90"><abbr title="App\Controller\UsersController::addStudent">addStudent</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="StudentsController.php.html#99"><abbr title="App\Controller\StudentsController::delete">delete</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.3.2</a> using <a href="https://secure.php.net/" target="_top">PHP 7.1.8</a> with <a href="https://xdebug.org/">Xdebug 2.5.5</a> and <a href="https://phpunit.de/">PHPUnit 6.5.13</a> at Wed Nov 7 19:41:35 UTC 2018.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../.js/jquery.min.js" type="text/javascript"></script>
+  <script src="../.js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../.js/holder.min.js" type="text/javascript"></script>
+  <script src="../.js/d3.min.js" type="text/javascript"></script>
+  <script src="../.js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([9,1,0,0,0,0,0,1,1,1,0,1], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([69,0,0,0,0,0,1,1,1,2,0,8], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,10,"<a href=\"AdminsController.php.html#13\">App\\Controller\\AdminsController<\/a>"],[69.230769230769226,3,"<a href=\"AppController.php.html#28\">App\\Controller\\AppController<\/a>"],[0,10,"<a href=\"BuildingsTypesController.php.html#13\">App\\Controller\\BuildingsTypesController<\/a>"],[100,4,"<a href=\"ErrorController.php.html#24\">App\\Controller\\ErrorController<\/a>"],[0,22,"<a href=\"InternshipsController.php.html#16\">App\\Controller\\InternshipsController<\/a>"],[0,10,"<a href=\"InternshipsMissionsController.php.html#13\">App\\Controller\\InternshipsMissionsController<\/a>"],[0,18,"<a href=\"InternshipsStudentsController.php.html#14\">App\\Controller\\InternshipsStudentsController<\/a>"],[0,10,"<a href=\"InternshipsTypesController.php.html#13\">App\\Controller\\InternshipsTypesController<\/a>"],[0,10,"<a href=\"MissionsController.php.html#13\">App\\Controller\\MissionsController<\/a>"],[88.235294117647058,8,"<a href=\"PagesController.php.html#30\">App\\Controller\\PagesController<\/a>"],[75.862068965517238,12,"<a href=\"StudentsController.php.html#13\">App\\Controller\\StudentsController<\/a>"],[0,19,"<a href=\"SupervisorsController.php.html#14\">App\\Controller\\SupervisorsController<\/a>"],[0,10,"<a href=\"TypesController.php.html#13\">App\\Controller\\TypesController<\/a>"],[5.4794520547945202,42,"<a href=\"UsersController.php.html#14\">App\\Controller\\UsersController<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"AdminsController.php.html#21\">App\\Controller\\AdminsController::index<\/a>"],[0,1,"<a href=\"AdminsController.php.html#35\">App\\Controller\\AdminsController::view<\/a>"],[0,3,"<a href=\"AdminsController.php.html#49\">App\\Controller\\AdminsController::add<\/a>"],[0,3,"<a href=\"AdminsController.php.html#71\">App\\Controller\\AdminsController::edit<\/a>"],[0,2,"<a href=\"AdminsController.php.html#95\">App\\Controller\\AdminsController::delete<\/a>"],[0,2,"<a href=\"AppController.php.html#30\">App\\Controller\\AppController::isAuthorized<\/a>"],[100,1,"<a href=\"AppController.php.html#50\">App\\Controller\\AppController::initialize<\/a>"],[0,1,"<a href=\"BuildingsTypesController.php.html#21\">App\\Controller\\BuildingsTypesController::index<\/a>"],[0,1,"<a href=\"BuildingsTypesController.php.html#35\">App\\Controller\\BuildingsTypesController::view<\/a>"],[0,3,"<a href=\"BuildingsTypesController.php.html#49\">App\\Controller\\BuildingsTypesController::add<\/a>"],[0,3,"<a href=\"BuildingsTypesController.php.html#71\">App\\Controller\\BuildingsTypesController::edit<\/a>"],[0,2,"<a href=\"BuildingsTypesController.php.html#95\">App\\Controller\\BuildingsTypesController::delete<\/a>"],[100,1,"<a href=\"ErrorController.php.html#31\">App\\Controller\\ErrorController::initialize<\/a>"],[100,1,"<a href=\"ErrorController.php.html#44\">App\\Controller\\ErrorController::beforeFilter<\/a>"],[100,1,"<a href=\"ErrorController.php.html#54\">App\\Controller\\ErrorController::beforeRender<\/a>"],[100,1,"<a href=\"ErrorController.php.html#67\">App\\Controller\\ErrorController::afterFilter<\/a>"],[0,1,"<a href=\"InternshipsController.php.html#18\">App\\Controller\\InternshipsController::initialize<\/a>"],[0,9,"<a href=\"InternshipsController.php.html#24\">App\\Controller\\InternshipsController::isAuthorized<\/a>"],[0,1,"<a href=\"InternshipsController.php.html#57\">App\\Controller\\InternshipsController::index<\/a>"],[0,1,"<a href=\"InternshipsController.php.html#74\">App\\Controller\\InternshipsController::view<\/a>"],[0,4,"<a href=\"InternshipsController.php.html#90\">App\\Controller\\InternshipsController::add<\/a>"],[0,3,"<a href=\"InternshipsController.php.html#124\">App\\Controller\\InternshipsController::edit<\/a>"],[0,2,"<a href=\"InternshipsController.php.html#151\">App\\Controller\\InternshipsController::delete<\/a>"],[0,1,"<a href=\"InternshipsController.php.html#164\">App\\Controller\\InternshipsController::email<\/a>"],[0,1,"<a href=\"InternshipsMissionsController.php.html#21\">App\\Controller\\InternshipsMissionsController::index<\/a>"],[0,1,"<a href=\"InternshipsMissionsController.php.html#38\">App\\Controller\\InternshipsMissionsController::view<\/a>"],[0,3,"<a href=\"InternshipsMissionsController.php.html#52\">App\\Controller\\InternshipsMissionsController::add<\/a>"],[0,3,"<a href=\"InternshipsMissionsController.php.html#76\">App\\Controller\\InternshipsMissionsController::edit<\/a>"],[0,2,"<a href=\"InternshipsMissionsController.php.html#102\">App\\Controller\\InternshipsMissionsController::delete<\/a>"],[0,8,"<a href=\"InternshipsStudentsController.php.html#17\">App\\Controller\\InternshipsStudentsController::isAuthorized<\/a>"],[0,1,"<a href=\"InternshipsStudentsController.php.html#35\">App\\Controller\\InternshipsStudentsController::index<\/a>"],[0,2,"<a href=\"InternshipsStudentsController.php.html#53\">App\\Controller\\InternshipsStudentsController::delete<\/a>"],[0,3,"<a href=\"InternshipsStudentsController.php.html#67\">App\\Controller\\InternshipsStudentsController::postuler<\/a>"],[0,2,"<a href=\"InternshipsStudentsController.php.html#84\">App\\Controller\\InternshipsStudentsController::APostuler<\/a>"],[0,1,"<a href=\"InternshipsStudentsController.php.html#95\">App\\Controller\\InternshipsStudentsController::viewApplication<\/a>"],[0,1,"<a href=\"InternshipsStudentsController.php.html#104\">App\\Controller\\InternshipsStudentsController::convoquer<\/a>"],[0,1,"<a href=\"InternshipsTypesController.php.html#21\">App\\Controller\\InternshipsTypesController::index<\/a>"],[0,1,"<a href=\"InternshipsTypesController.php.html#38\">App\\Controller\\InternshipsTypesController::view<\/a>"],[0,3,"<a href=\"InternshipsTypesController.php.html#52\">App\\Controller\\InternshipsTypesController::add<\/a>"],[0,3,"<a href=\"InternshipsTypesController.php.html#76\">App\\Controller\\InternshipsTypesController::edit<\/a>"],[0,2,"<a href=\"InternshipsTypesController.php.html#102\">App\\Controller\\InternshipsTypesController::delete<\/a>"],[0,1,"<a href=\"MissionsController.php.html#21\">App\\Controller\\MissionsController::index<\/a>"],[0,1,"<a href=\"MissionsController.php.html#35\">App\\Controller\\MissionsController::view<\/a>"],[0,3,"<a href=\"MissionsController.php.html#49\">App\\Controller\\MissionsController::add<\/a>"],[0,3,"<a href=\"MissionsController.php.html#72\">App\\Controller\\MissionsController::edit<\/a>"],[0,2,"<a href=\"MissionsController.php.html#97\">App\\Controller\\MissionsController::delete<\/a>"],[88.235294117647058,8,"<a href=\"PagesController.php.html#42\">App\\Controller\\PagesController::display<\/a>"],[50,5,"<a href=\"StudentsController.php.html#15\">App\\Controller\\StudentsController::isAuthorized<\/a>"],[100,1,"<a href=\"StudentsController.php.html#44\">App\\Controller\\StudentsController::index<\/a>"],[100,1,"<a href=\"StudentsController.php.html#58\">App\\Controller\\StudentsController::view<\/a>"],[70,3,"<a href=\"StudentsController.php.html#74\">App\\Controller\\StudentsController::edit<\/a>"],[83.333333333333343,2,"<a href=\"StudentsController.php.html#99\">App\\Controller\\StudentsController::delete<\/a>"],[0,1,"<a href=\"SupervisorsController.php.html#16\">App\\Controller\\SupervisorsController::initialize<\/a>"],[0,1,"<a href=\"SupervisorsController.php.html#27\">App\\Controller\\SupervisorsController::index<\/a>"],[0,4,"<a href=\"SupervisorsController.php.html#33\">App\\Controller\\SupervisorsController::isAuthorized<\/a>"],[0,1,"<a href=\"SupervisorsController.php.html#59\">App\\Controller\\SupervisorsController::view<\/a>"],[0,3,"<a href=\"SupervisorsController.php.html#73\">App\\Controller\\SupervisorsController::add<\/a>"],[0,3,"<a href=\"SupervisorsController.php.html#96\">App\\Controller\\SupervisorsController::edit<\/a>"],[0,2,"<a href=\"SupervisorsController.php.html#120\">App\\Controller\\SupervisorsController::delete<\/a>"],[0,3,"<a href=\"SupervisorsController.php.html#133\">App\\Controller\\SupervisorsController::verifyEdited<\/a>"],[0,1,"<a href=\"SupervisorsController.php.html#151\">App\\Controller\\SupervisorsController::email<\/a>"],[0,1,"<a href=\"TypesController.php.html#21\">App\\Controller\\TypesController::index<\/a>"],[0,1,"<a href=\"TypesController.php.html#35\">App\\Controller\\TypesController::view<\/a>"],[0,3,"<a href=\"TypesController.php.html#49\">App\\Controller\\TypesController::add<\/a>"],[0,3,"<a href=\"TypesController.php.html#72\">App\\Controller\\TypesController::edit<\/a>"],[0,2,"<a href=\"TypesController.php.html#97\">App\\Controller\\TypesController::delete<\/a>"],[100,1,"<a href=\"UsersController.php.html#16\">App\\Controller\\UsersController::initialize<\/a>"],[0,6,"<a href=\"UsersController.php.html#21\">App\\Controller\\UsersController::isAuthorized<\/a>"],[0,3,"<a href=\"UsersController.php.html#42\">App\\Controller\\UsersController::login<\/a>"],[0,1,"<a href=\"UsersController.php.html#53\">App\\Controller\\UsersController::logout<\/a>"],[0,1,"<a href=\"UsersController.php.html#64\">App\\Controller\\UsersController::index<\/a>"],[0,1,"<a href=\"UsersController.php.html#77\">App\\Controller\\UsersController::view<\/a>"],[62.5,2,"<a href=\"UsersController.php.html#90\">App\\Controller\\UsersController::addStudent<\/a>"],[0,2,"<a href=\"UsersController.php.html#105\">App\\Controller\\UsersController::addSuper<\/a>"],[0,4,"<a href=\"UsersController.php.html#127\">App\\Controller\\UsersController::editStudent<\/a>"],[0,4,"<a href=\"UsersController.php.html#156\">App\\Controller\\UsersController::edit<\/a>"],[0,4,"<a href=\"UsersController.php.html#181\">App\\Controller\\UsersController::editSuper<\/a>"],[0,2,"<a href=\"UsersController.php.html#227\">App\\Controller\\UsersController::delete<\/a>"],[0,2,"<a href=\"UsersController.php.html#239\">App\\Controller\\UsersController::verifyAndSaveSupervisor<\/a>"],[0,3,"<a href=\"UsersController.php.html#247\">App\\Controller\\UsersController::saveUserSupervisor<\/a>"],[0,3,"<a href=\"UsersController.php.html#265\">App\\Controller\\UsersController::verifyAndSaveStudent<\/a>"],[0,3,"<a href=\"UsersController.php.html#279\">App\\Controller\\UsersController::saveUserStudent<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

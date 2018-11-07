@@ -1369,3 +1369,211 @@ Stack Trace:
 #25 {main}
 
 
+2018-11-07 19:39:58 Error: [PHPUnit\Runner\Exception] Class '' could not be found in 'C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest'. in C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Runner\StandardTestSuiteLoader.php on line 102
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Runner\BaseTestRunner.php(130): PHPUnit\Runner\StandardTestSuiteLoader->load('', 'C:\\Program File...')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Runner\BaseTestRunner.php(73): PHPUnit\Runner\BaseTestRunner->loadSuiteClass('', 'C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(169): PHPUnit\Runner\BaseTestRunner->getTest('', 'C:\\Program File...', Array)
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#5 {main}
+
+
+2018-11-07 19:43:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\home\home.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\home\\home.ctp',
+)
+Request URL: /pages/home
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Pages\\home\\home')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render('home/home', NULL)
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\src\Controller\PagesController.php(62): Cake\Controller\Controller->render('home/home')
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\PagesController->display('home', 'home')
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#19 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/home', 'GET')
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\PagesControllerTest.php(38): Cake\TestSuite\IntegrationTestCase->get('/pages/home')
+#22 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMultipleGet()
+#23 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#24 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#25 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#26 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#27 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#28 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#29 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#30 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#31 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#32 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#33 {main}
+
+
+2018-11-07 19:43:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\home\home.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\home\\home.ctp',
+)
+Request URL: /pages/home
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Pages\\home\\home')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render('home/home', NULL)
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\src\Controller\PagesController.php(62): Cake\Controller\Controller->render('home/home')
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\PagesController->display('home', 'home')
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#19 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/home', 'GET')
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\PagesControllerTest.php(52): Cake\TestSuite\IntegrationTestCase->get('/pages/home')
+#22 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDisplay()
+#23 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#24 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#25 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#26 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#27 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#28 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#29 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#30 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#31 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#32 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#33 {main}
+
+
+2018-11-07 19:43:08 Error: [Cake\Http\Exception\NotFoundException] Not Found
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\PagesController->display('home', 'not_existing')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\PagesControllerTest.php(66): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#19 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplate()
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#22 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#23 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#24 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#25 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#26 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#27 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#28 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#29 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#30 {main}
+
+
+2018-11-07 19:43:09 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\home\not_existing.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\home\\not_existing.ctp',
+)
+Request URL: /pages/not_existing
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\View\View.php(799): Cake\View\View->_getViewFileName('Pages\\home\\not_...')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(777): Cake\View\View->render('home/not_existi...', NULL)
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\src\Controller\PagesController.php(62): Cake\Controller\Controller->render('home/not_existi...')
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\PagesController->display('home', 'not_existing')
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#19 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/not_exis...', 'GET')
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\PagesControllerTest.php(80): Cake\TestSuite\IntegrationTestCase->get('/pages/not_exis...')
+#22 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testMissingTemplateInDebug()
+#23 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#24 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#25 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#26 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#27 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#28 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#29 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#30 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#31 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#32 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#33 {main}
+
+
+2018-11-07 19:43:10 Error: [Cake\Http\Exception\ForbiddenException] Forbidden
+Request URL: /pages/../Layout/ajax
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\PagesController->display('home', '..', 'Layout', 'ajax')
+#1 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#3 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(103): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\MiddlewareDispatcher.php(149): Cake\Http\Server->run(Object(Cake\Http\ServerRequest))
+#16 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(495): Cake\TestSuite\MiddlewareDispatcher->execute(Array)
+#17 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php(375): Cake\TestSuite\IntegrationTestCase->_sendRequest('/pages/../Layou...', 'GET')
+#18 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\PagesControllerTest.php(95): Cake\TestSuite\IntegrationTestCase->get('/pages/../Layou...')
+#19 [internal function]: App\Test\TestCase\Controller\PagesControllerTest->testDirectoryTraversalProtection()
+#20 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(1071): ReflectionMethod->invokeArgs(Object(App\Test\TestCase\Controller\PagesControllerTest), Array)
+#21 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(939): PHPUnit\Framework\TestCase->runTest()
+#22 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestResult.php(698): PHPUnit\Framework\TestCase->runBare()
+#23 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\PagesControllerTest))
+#24 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#25 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#26 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#27 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#28 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#29 C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#30 {main}
+
+

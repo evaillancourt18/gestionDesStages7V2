@@ -112,7 +112,7 @@ class StudentsControllerTest extends IntegrationTestCase
         $this->post('/students/edit/1');
 
         echo $this->_response->body();
-        $this->assertResponseOk();
+        $this->assertResponseSuccess();
     }
 
 	/*public function testEdit()
