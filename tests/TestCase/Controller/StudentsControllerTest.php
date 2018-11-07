@@ -97,12 +97,6 @@ class StudentsControllerTest extends IntegrationTestCase
         $this->assertResponseOk();
     }
 
-    public function testDeleteUnauthenticatedFail() {
-        $this->get('/students/delete/1');
-
-        $this->assertRedirect(['controller' => 'Users', 'action' => 'login', 'redirect'=> '/students/delete']);
-        //$this->markTestIncomplete('Not implemented yet.');
-    }
 
     /**
      * Test edit method
