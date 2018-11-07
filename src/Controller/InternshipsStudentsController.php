@@ -16,7 +16,7 @@ class InternshipsStudentsController extends AppController
 
 	public function isAuthorized($user) {
         $action = $this->request->getParam('action');
-        if($user['role'] === 'student' && $action == 'postuler' || $action == 'index' ) {
+        if($user['role'] === 'student' && $action == 'postuler' || $action == 'index' || $action == 'delete' ) {
             return true;
         }
         if($user['role'] === 'supervisor' && ($action == 'viewApplication' || $action == 'convoquer') ){
