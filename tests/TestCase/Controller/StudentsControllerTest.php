@@ -107,6 +107,18 @@ class StudentsControllerTest extends IntegrationTestCase
     {
         $this->session($this->AuthAdmin);
 
+        $this->enableCsrfToken();
+        $this->enableSecurityToken();
+        $this->post('/students/edit/1');
+
+        echo $this->_response->body();
+        $this->assertResponseOk();
+    }
+
+	/*public function testEdit()
+    {
+        $this->session($this->AuthAdmin);
+
         $newName = 'Test Student Edit';
 
         $student = $this->Students->find('all')->first();
@@ -120,8 +132,7 @@ class StudentsControllerTest extends IntegrationTestCase
 
         //echo $this->_response->body();
         $this->assertResponseSuccess();
-    }
-
+    }*/
     /**
      * Test delete method
      *

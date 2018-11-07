@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="App\Test\TestCase\Controller\StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" tests="6" assertions="21" errors="0" failures="1" skipped="1" time="0.327522">
+    <testcase name="testIsAuthorized" class="App\Test\TestCase\Controller\StudentsControllerTest" classname="App.Test.TestCase.Controller.StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" line="56" assertions="0" time="0.042923">
+      <skipped/>
+    </testcase>
+    <testcase name="testIndex" class="App\Test\TestCase\Controller\StudentsControllerTest" classname="App.Test.TestCase.Controller.StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" line="66" assertions="4" time="0.106068"/>
+    <testcase name="testView" class="App\Test\TestCase\Controller\StudentsControllerTest" classname="App.Test.TestCase.Controller.StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" line="80" assertions="5" time="0.032710"/>
+    <testcase name="testAdd" class="App\Test\TestCase\Controller\StudentsControllerTest" classname="App.Test.TestCase.Controller.StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" line="91" assertions="4" time="0.045256"/>
+    <testcase name="testEdit" class="App\Test\TestCase\Controller\StudentsControllerTest" classname="App.Test.TestCase.Controller.StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" line="106" assertions="4" time="0.022687">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">App\Test\TestCase\Controller\StudentsControllerTest::testEdit
+Status code is not between 200 and 204
+Failed asserting that 302 is equal to 204 or is less than 204.
+
+C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php:840
+C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\vendor\cakephp\cakephp\src\TestSuite\IntegrationTestCase.php:757
+C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php:115
+</failure>
+    </testcase>
+    <testcase name="testDelete" class="App\Test\TestCase\Controller\StudentsControllerTest" classname="App.Test.TestCase.Controller.StudentsControllerTest" file="C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php" line="141" assertions="4" time="0.077878"/>
+  </testsuite>
+</testsuites>

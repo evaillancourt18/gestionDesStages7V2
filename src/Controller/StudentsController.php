@@ -73,7 +73,6 @@ class StudentsController extends AppController
      */
     public function edit($id = null)
     {
-        die();
         $student = $this->Students->get($id, [
             'contain' => []
         ]);
