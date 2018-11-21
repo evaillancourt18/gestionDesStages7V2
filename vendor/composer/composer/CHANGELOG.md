@@ -1,3 +1,16 @@
+### [1.7.2] 2018-08-16
+
+  * Fixed reporting of authentication/rate limiting issues for GitHub API access
+  * Fixed `create-project` not checking the checking the latest commit out when a cache was already present
+  * Fixed reporting of errors when `global` command can not switch the working directory
+  * Fixed PHP 5.3 JSON encoding issues with complex unicode character sequences
+  * Updated to latest ca-bundle and xdebug-handler projects, see related changelogs
+
+### [1.7.1] 2018-08-07
+
+  * Fixed issue autoloading plugins in require-dev in some conditions
+  * Fixed handling of SSL to repo.packagist.org on very old PHP versions
+
 ### [1.7.0] 2018-08-03
 
   * Added the overridden platform config's PHP version in the `diagnose` command output
@@ -674,7 +687,9 @@
 
   * Initial release
 
-[1.7.0]: https://github.com/composer/composer/compare/1.7.0...1.7.0
+[1.7.2]: https://github.com/composer/composer/compare/1.7.1...1.7.2
+[1.7.1]: https://github.com/composer/composer/compare/1.7.0...1.7.1
+[1.7.0]: https://github.com/composer/composer/compare/1.7.0-RC...1.7.0
 [1.7.0-RC]: https://github.com/composer/composer/compare/1.6.5...1.7.0-RC
 [1.6.5]: https://github.com/composer/composer/compare/1.6.4...1.6.5
 [1.6.4]: https://github.com/composer/composer/compare/1.6.3...1.6.4

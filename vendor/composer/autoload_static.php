@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
+class ComposerStaticInit839157af1f7ff49b510b4267407c1913
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -92,6 +92,7 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         ),
         'C' => 
         array (
+            'Crud\\' => 5,
             'Composer\\XdebugHandler\\' => 23,
             'Composer\\Spdx\\' => 14,
             'Composer\\Semver\\' => 16,
@@ -101,6 +102,7 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
             'Cake\\Composer\\' => 14,
             'Cake\\Chronos\\' => 13,
             'Cake\\' => 5,
+            'CakePdf\\' => 8,
             'CakePHP\\' => 8,
         ),
         'B' => 
@@ -243,6 +245,10 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         array (
             0 => __DIR__ . '/..' . '/cakephp/debug_kit/src',
         ),
+        'Crud\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofcake/crud/src',
+        ),
         'Composer\\XdebugHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
@@ -278,6 +284,10 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         'Cake\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/cakephp/src',
+        ),
+        'CakePdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofcake/cakepdf/src',
         ),
         'CakePHP\\' => 
         array (
@@ -916,11 +926,11 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit839157af1f7ff49b510b4267407c1913::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit839157af1f7ff49b510b4267407c1913::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit839157af1f7ff49b510b4267407c1913::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit839157af1f7ff49b510b4267407c1913::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit839157af1f7ff49b510b4267407c1913::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -70,10 +70,13 @@ class InternshipsStudentsController extends AppController
         $internshipsStudent['internship_id'] = $InternshipId;
         $loguser = $this->request->session()->read('Auth.User');
         $student = $this->InternshipsStudents->Students->findByUserId($loguser['id'])->first();
+        $internship = $this->InternshipsStudents->Internships->findById($InternshipId)->first();
+           
         $internshipsStudent['student_id'] = $student['id'];
             if ($this->InternshipsStudents->save($internshipsStudent)) {
                 $this->Flash->success(__('The internships application has been saved.'));
-
+                
+                $this->sendEmailApplication($internship, $student);
                 return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
             }
         }
@@ -119,6 +122,18 @@ class InternshipsStudentsController extends AppController
         return $this->redirect(['controller' => 'Internships', 'action' => 'index']);
                     
         
+    }
+
+    public function sendEmailApplication($internship, $student){
+        $supervisor = $this->InternshipsStudents->Internships->Supervisors->findById($internship['supervisor_id'])->first();
+        $email = new Email('default');
+        $email->to($supervisor['email']);
+        $email->subject(__('Un étudiant a postuler sur '. $internship->title));
+        $email->send('L\'étudiant ' . $student->first_name . ' a postuler sur le poste ' .$internship->title. '.
+        Veuillez allez sur le site pour le convoquer.'  
+                    );
+
+
     }
 	
 	

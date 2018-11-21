@@ -1,4 +1,5 @@
 <?php
+
 use Cake\Mailer\Email;
 return [
     /**
@@ -279,7 +280,7 @@ return [
             */
             'username' => 'root',
             'password' => 'mysql',
-            'database' => 'gestionDeStageV2',
+            'database' => 'gestionDeStage',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */

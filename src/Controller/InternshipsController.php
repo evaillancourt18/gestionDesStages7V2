@@ -94,7 +94,7 @@ class InternshipsController extends AppController
             if ($this->Internships->save($internship)) {
                 $this->Flash->success(__('The internship has been saved.'));
 
-                $users = $this->Internships->Supervisors->Users->find('all' , ['conditions' => ['Users.role' === 'student']])->toArray();
+                $users = $this->Internships->Supervisors->Users->find('all' , ['conditions' => ['Users.role' => 'student']])->toArray();
                 $supervisor = $this->Internships->Supervisors->get($internship->supervisor_id, [
                     'contain' => []
                 ]);
