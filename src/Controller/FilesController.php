@@ -70,18 +70,27 @@ class FilesController extends AppController
         $file = $this->Files->newEntity();
         if ($this->request->is('post')) {
             if (!empty($this->request->data['name']['name'])) {
-                $fileName = $student['id'] . "_" . $this->request->data['name']['name'];
-                $uploadPath = 'students/';
+                $fileName = $this->request->data['name']['name'];
+                $uploadPath = 'students/'.$student['id'].'/';
                 $uploadFile = $uploadPath . $fileName;
+
+                if(!file_exists('Files/' . $uploadPath)){
+                    mkdir('Files/' . $uploadPath,0700);
+                }
 
                 
 
+                $fileType = strtolower(pathinfo($uploadFile , PATHINFO_EXTENSION));
                 if(file_exists('Files/' . $uploadFile)){
                     $this->Flash->error(__('Unable to upload file, File with the same name exists.'));
                 } else {
-                    if(filesize($this->request->data['name']['tmp_name']) > 18){
+                    if(filesize($this->request->data['name']['tmp_name']) > 5000000){
                         $this->Flash->error(__('Unable to upload file, File is too large.'));
                     }else{
+                        if($fileType != 'pdf' && $fileType != 'docx' && $fileType != 'txt'){
+                            $this->Flash->error(__('Unable to upload file, File need to be a pdf or a word file.'));
+                        }else{
+                            
                 if (move_uploaded_file($this->request->data['name']['tmp_name'], 'Files/' . $uploadFile)) {
                     $file = $this->Files->patchEntity($file, $this->request->getData());
                     $file->name = $fileName;
@@ -99,6 +108,7 @@ class FilesController extends AppController
                 }
             }
         }
+    }
             } else {
                 $this->Flash->error(__('Please choose a file to upload.'));
             }

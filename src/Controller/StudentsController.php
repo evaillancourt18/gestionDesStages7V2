@@ -18,7 +18,7 @@ class StudentsController extends AppController
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
-        if ( $user['role'] === 'supervisor' && $action === 'view') {
+        if ( $user['role'] === 'supervisor' && $action === 'view' || $action === 'viewFile') {
             return true;
         }
 
@@ -60,9 +60,29 @@ class StudentsController extends AppController
         $student = $this->Students->get($id, [
             'contain' => []
         ]);
+        $files = $this->Students->Files->findByStudentId($id)->toArray();
 
-        $this->set('student', $student);
+        $this->set(compact('student', 'files'));
     }
+
+    public function viewFile($id = null)
+    {
+        $file = $this->Students->Files->findById($id)->first();
+        $filepath = "Files/" . $file['path'] . $file['name'];
+        header('Pragma: public');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+        header('Cache-Control: private', false);
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
+        header('Content-Transfer-Encoding: binary');
+        header('Content-Length: ' . filesize($filepath));
+        readfile($filepath);
+        exit;
+        
+        $this->set(compact( 'file'));
+    }
+
 
     /**
      * Edit method

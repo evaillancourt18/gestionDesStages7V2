@@ -43,6 +43,11 @@ $loguser = $this->request->session()->read('Auth.User')
     </table>
     <div class="row">
         <h4><?= __('Info') ?></h4>
-        <?= $this->Text->autoParagraph(h($student->info)); ?>
+        <?php
+         foreach ($files as $file): 
+        echo $this->Html->link(__($file['name']), ['action' => 'viewFile', $file['id']]); 
+        ?>
+        <br/>
+        <?php  endforeach; ?>
     </div>
 </div>
