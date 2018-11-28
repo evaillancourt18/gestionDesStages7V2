@@ -26,6 +26,11 @@ $role = $loguser['role'];
         <?php if ($role === 'supervisor') : ?>
             <li> <?= $this->Html->link(__('New Internship'), ['controller' => 'Internships', 'action' => 'add', $loguser['id']]) ?></li>
         <?php endif ?>
+        <?php if ($role === 'student') : ?>
+            <li> <?= $this->Html->link(__('New File'), ['controller' => 'Files', 'action' => 'add']) ?></li>
+            <li> <?= $this->Html->link(__('View File'), ['controller' => 'Files', 'action' => 'index',""]) ?></li>
+        
+        <?php endif ?>
         <li><?= $this->Html->link(__('Edit account'), ['controller' => 'Users', 'action' => $editAction, $user->id]) ?></li>
     </ul>
 </nav>
