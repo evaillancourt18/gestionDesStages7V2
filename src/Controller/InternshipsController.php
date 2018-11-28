@@ -54,12 +54,17 @@ class InternshipsController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
+    public function index($status = null)
     {
         $this->paginate = [
             'contain' => ['Supervisors', 'BuildingsTypes']
         ];
+        
+        $this->paginate = [
+            'contain' => ['Supervisors', 'BuildingsTypes']
+        ];
         $internships = $this->paginate($this->Internships);
+        
 
         $this->set(compact('internships'));
     }

@@ -17,13 +17,15 @@ $loguser = $this->request->getSession()->read('Auth.User');
             <li> <?= $this->Html->link(__('New Internship'), ['controller' => 'Internships', 'action' => 'add', $loguser['id']]) ?></li>
         <?php endif ?>
         <?php if ($loguser['role'] == 'student') : ?>
-        <li><?= $this->Html->link(__('List of application'), ['controller' => 'InternshipsStudents', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List of ap
+        plication'), ['controller' => 'InternshipsStudents', 'action' => 'index']) ?></li>
          <?php endif ?>
        
     </ul>
 </nav>
 <div class="internships index large-9 medium-8 columns content">
     <h3><?= __('Internships') ?></h3>
+    
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
