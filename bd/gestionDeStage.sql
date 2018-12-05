@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 28 Novembre 2018 à 19:11
+-- Généré le :  Mer 05 Décembre 2018 à 18:58
 -- Version du serveur :  5.6.37
 -- Version de PHP :  5.6.31
 
@@ -74,15 +74,15 @@ CREATE TABLE IF NOT EXISTS `files` (
   `name` varchar(255) NOT NULL,
   `path` varchar(255) NOT NULL,
   `student_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `files`
 --
 
 INSERT INTO `files` (`id`, `name`, `path`, `student_id`) VALUES
-(13, '23_La Peur.rtf', 'students/', 23),
-(14, '23_New Text Document.txt', 'students/', 23);
+(21, 'C.V_Frederik_Sylvain.docx', 'students/23/', 23),
+(25, 'C.V_Frederik_Sylvain (1).docx', 'students/', 23);
 
 -- --------------------------------------------------------
 
@@ -104,14 +104,15 @@ CREATE TABLE IF NOT EXISTS `internships` (
   `supervisor_id` int(11) NOT NULL,
   `created` date NOT NULL,
   `modified` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `internships`
 --
 
 INSERT INTO `internships` (`id`, `title`, `address`, `city`, `province`, `postal_code`, `administrative_region`, `description`, `buildingType_id`, `actif`, `supervisor_id`, `created`, `modified`) VALUES
-(6, 'testPavel', 'test', 'test', 'test', 'H7l4w7', 'frsjfe', 'TestDePlace', 4, 1, 8, '2018-11-21', '2018-11-21');
+(6, 'testPavel', 'test', 'test', 'test', 'H7l4w7', 'frsjfe', 'TestDePlace', 4, 1, 8, '2018-11-21', '2018-11-21'),
+(7, 'testAd', '', '', '', '', '', '', 1, 1, 9, '2018-11-28', '2018-11-28');
 
 -- --------------------------------------------------------
 
@@ -143,14 +144,15 @@ CREATE TABLE IF NOT EXISTS `internships_students` (
   `id` int(11) NOT NULL,
   `internship_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `internships_students`
 --
 
 INSERT INTO `internships_students` (`id`, `internship_id`, `student_id`) VALUES
-(11, 6, 23);
+(11, 6, 23),
+(12, 7, 23);
 
 -- --------------------------------------------------------
 
@@ -232,27 +234,18 @@ CREATE TABLE IF NOT EXISTS `students` (
   `phone` varchar(12) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `info` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `grade` decimal(3,0) DEFAULT NULL,
-  `actif` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+  `actif` tinyint(1) DEFAULT NULL,
+  `taken` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `students`
 --
 
-INSERT INTO `students` (`id`, `user_id`, `student_number`, `last_name`, `first_name`, `phone`, `info`, `grade`, `actif`) VALUES
-(5, NULL, 222333676, 'Test 2', 'Test 2', '450-222-2222', 'Test 2', '32', 1),
-(12, NULL, 111222333, 'Trump', 'Donald', '450.333.3333', 'douchbag3', '100', 1),
-(13, NULL, 112233123, 'Bouchard', 'Louis', '450.325.7744', '', '85', 1),
-(14, NULL, 201159247, 'Sylvain', 'Frederik', '514.888.8888', 'Je ne sais pas ce que je fait', '100', 1),
-(15, NULL, 111111111, 'Aa', 'Aa', '999.999.9999', 'a', '89', 1),
-(16, NULL, 111111112, 'Hello', 'Maybe Want to patch that', '999.999.9999', 'hahaha', '99', 1),
-(17, NULL, 111111113, 'Hello', 'Again', '999.999.9999', 'Its the last one', '100', 1),
-(18, NULL, 222222222, 'Test', 'Michel', '555.555.5555', '', '2', 1),
-(19, NULL, 201159245, 'Sylvain', 'Frederik', '514.666.6666', '', '70', 1),
-(20, NULL, 123412312, 'A', 'A', '222.222.2222', '2', '2', 1),
-(21, NULL, 201111336, 'Sylvain', 'Frederik', '450.666.2222', '', '80', 1),
-(22, NULL, 200862745, 'Vaillancourt', 'Étienne', '514.515.8685', '', '90', 1),
-(23, 32, 123456789, 'Sylvain', 'Frederik', '450.682.6593', '', '99', 1);
+INSERT INTO `students` (`id`, `user_id`, `student_number`, `last_name`, `first_name`, `phone`, `info`, `grade`, `actif`, `taken`) VALUES
+(23, 32, 123456789, 'Sylvain', 'Frederik', '450.682.6593', '', '99', 1, 0),
+(24, 35, 123456798, 'TestActif', 'Test', '514.639.2126', '', '90', 1, 0),
+(25, 36, 321654987, 'Test', 'Inactif', '514.639.2126', '', '30', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -278,14 +271,15 @@ CREATE TABLE IF NOT EXISTS `supervisors` (
   `cellphone` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fax` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
   `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `supervisors`
 --
 
 INSERT INTO `supervisors` (`id`, `user_id`, `gender`, `first_name`, `last_name`, `title`, `location`, `address`, `city`, `province`, `postal_code`, `email`, `phone`, `extension`, `cellphone`, `fax`, `active`) VALUES
-(8, 33, 'M.', 'Pavel', 'Zaka', '', '', '', '', '', '', 'zaharpl@hotmail.com', '514.639.2126', '', '514.639.2126', '514.639.2126', 0);
+(8, 33, 'M.', 'Pavel', 'Zaka', '', '', '', '', '', '', 'zaharpl@hotmail.com', '514.639.2126', '', '514.639.2126', '514.639.2126', 0),
+(9, 34, 'Male', 'Agustin', 'Torres', 'Master', 'Here', 'You dont need to know', 'Anywhere', 'but', 'H7l4w7', 'agutorres16@gmail.com', '514.936.2563', '', '514.936.2563', '514.936.2563', 0);
 
 -- --------------------------------------------------------
 
@@ -360,17 +354,22 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `role` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `role` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `time_stamp` int(11) DEFAULT NULL,
+  `token` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
-(1, 'admin@mail.com', '$2y$10$npgIDB2lHgPZsiCs1JnjzuNKz27c8poSvu/JaaA8/RvSYrfbkJvce', 'admin'),
-(32, 'frederik.sylvain6@hotmail.com', '$2y$10$4TqpX7xuA5D.yB5qtFRbjuWL5IVePgmOlkeLb7o1phX47Fp89v22.', 'student'),
-(33, 'zaharpl@hotmail.com', '$2y$10$GSkwgCN/xM9JT.ja0iYMouTaPCiTw2mEZl0uv7gK/KHTMiSXH44g6', 'supervisor');
+INSERT INTO `users` (`id`, `email`, `password`, `role`, `time_stamp`, `token`) VALUES
+(1, 'admin@mail.com', '$2y$10$npgIDB2lHgPZsiCs1JnjzuNKz27c8poSvu/JaaA8/RvSYrfbkJvce', 'admin', NULL, NULL),
+(32, 'frederik.sylvain6@hotmail.com', '$2y$10$4TqpX7xuA5D.yB5qtFRbjuWL5IVePgmOlkeLb7o1phX47Fp89v22.', 'student', NULL, NULL),
+(33, 'zaharpl@hotmail.com', '$2y$10$GSkwgCN/xM9JT.ja0iYMouTaPCiTw2mEZl0uv7gK/KHTMiSXH44g6', 'supervisor', NULL, NULL),
+(34, 'agutorres16@gmail.com', '$2y$10$6sb9e.beatXSTqkdNtDkJuiRpVxFbDFn4obHknKL4gfcWahZSxvFm', 'supervisor', NULL, NULL),
+(35, 'testactif@mail.com', '$2y$10$Ajcpap1nrnGHZG14g5vUnuMZcPP4guZLsdQipxEaqsIMW4Xw/4Q/K', 'student', NULL, NULL),
+(36, 'testinactif@mail.com', '$2y$10$tlss26d1hhdw7Ivkm.tJdO3XNCyYwroiJnjXWyzMz4YyhGFVyZDfq', 'student', NULL, NULL);
 
 --
 -- Index pour les tables exportées
@@ -477,17 +476,17 @@ ALTER TABLE `buildings_types`
 -- AUTO_INCREMENT pour la table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `internships`
 --
 ALTER TABLE `internships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT pour la table `internships_students`
 --
 ALTER TABLE `internships_students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT pour la table `missions`
 --
@@ -497,12 +496,12 @@ ALTER TABLE `missions`
 -- AUTO_INCREMENT pour la table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `supervisors`
 --
 ALTER TABLE `supervisors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `types`
 --
@@ -512,7 +511,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=37;
 --
 -- Contraintes pour les tables exportées
 --
