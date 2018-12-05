@@ -56,8 +56,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     } else {
                         echo $this->Html->link(__('Sign in'), ['controller' => 'Users', 'action' => 'login']);
                     }
+                    
                 ?>
-                 
             </ul>
         </div>
     </nav>

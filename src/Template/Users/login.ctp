@@ -4,3 +4,4 @@
 <?= $this->Form->control('password') ?>
 <?= $this->Form->button('Login') ?>
 <?= $this->Form->end() ?>
+<?php echo $this->Html->link(__('Forgot password?'), ['action' => 'forgot']); ?>

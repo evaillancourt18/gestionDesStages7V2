@@ -1,15 +1,14 @@
+
 -- phpMyAdmin SQL Dump
--- version 4.7.7
--- https://www.phpmyadmin.net/
+-- version 4.4.15.9
+-- https://www.phpmyadmin.net
 --
--- Hôte : localhost:3306
--- Généré le :  mar. 30 oct. 2018 à 10:21
--- Version du serveur :  10.1.36-MariaDB-cll-lve
--- Version de PHP :  5.6.30
+-- Client :  localhost
+-- Généré le :  Mer 28 Novembre 2018 à 19:11
+-- Version du serveur :  5.6.37
+-- Version de PHP :  5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `gestio52_gestionDeStage`
+-- Base de données :  `GestionDeStage`
 --
 
 -- --------------------------------------------------------
@@ -28,15 +27,15 @@ SET time_zone = "+00:00";
 -- Structure de la table `admins`
 --
 
-CREATE TABLE `admins` (
+CREATE TABLE IF NOT EXISTS `admins` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `phone` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `admins`
+-- Contenu de la table `admins`
 --
 
 INSERT INTO `admins` (`id`, `user_id`, `name`, `phone`) VALUES
@@ -48,13 +47,13 @@ INSERT INTO `admins` (`id`, `user_id`, `name`, `phone`) VALUES
 -- Structure de la table `buildings_types`
 --
 
-CREATE TABLE `buildings_types` (
+CREATE TABLE IF NOT EXISTS `buildings_types` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `buildings_types`
+-- Contenu de la table `buildings_types`
 --
 
 INSERT INTO `buildings_types` (`id`, `name`) VALUES
@@ -68,10 +67,31 @@ INSERT INTO `buildings_types` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `files`
+--
+
+CREATE TABLE IF NOT EXISTS `files` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `path` varchar(255) NOT NULL,
+  `student_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `files`
+--
+
+INSERT INTO `files` (`id`, `name`, `path`, `student_id`) VALUES
+(13, '23_La Peur.rtf', 'students/', 23),
+(14, '23_New Text Document.txt', 'students/', 23);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `internships`
 --
 
-CREATE TABLE `internships` (
+CREATE TABLE IF NOT EXISTS `internships` (
   `id` int(11) NOT NULL,
   `title` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `address` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -85,20 +105,14 @@ CREATE TABLE `internships` (
   `supervisor_id` int(11) NOT NULL,
   `created` date NOT NULL,
   `modified` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `internships`
+-- Contenu de la table `internships`
 --
 
 INSERT INTO `internships` (`id`, `title`, `address`, `city`, `province`, `postal_code`, `administrative_region`, `description`, `buildingType_id`, `actif`, `supervisor_id`, `created`, `modified`) VALUES
-(1, 'Testy', 'Test Address 1111', 'Test', 'Test', 'Test', 'Québec', 'Vous allez travailler sur tel et tel chose', 6, 1, 3, '2018-10-02', '2018-10-03'),
-(2, 'Bell', '1111 Bell', 'Montréal', 'Québec', 'H3A3A3', 'Québec', 'Bell', 5, 1, 5, '2018-10-02', '2018-10-02'),
-(3, 'Videotron', '123 Rue de Videotron', 'Montréal', 'Québec', 'H1A1A1', 'Québec', 'Un stage de programmation PhP', 1, 1, 3, '2018-10-03', '2018-10-03'),
-(4, 'Tester des truc', '6360 Rue des testeurs', 'TestCity', 'floride', 'cakeall', 'BakeAll', 'Tester des programmes qui font des affaire sur des trucs', 5, 1, 6, '2018-10-03', '2018-10-03'),
-(5, '123', '123 Rue de Videotron', 'Montréal', 'Québec', 'h7g1s4', 'Québec', 'Un stage de programmation PhP', 3, 1, 7, '2018-10-03', '2018-10-03'),
-(6, 'TestSite', 'TestSite', 'TestSite', 'TestSite', 'TestSit', 'TestSite', 'TestSite', 4, 1, 3, '2018-10-24', '2018-10-24'),
-(7, 'SITE TESTE', 'SITE TESTE', 'SITE TESTE', 'SITE TESTE', 'SITE TE', 'SITE TESTE', 'SITE TESTE', 2, 1, 3, '2018-10-24', '2018-10-24');
+(6, 'testPavel', 'test', 'test', 'test', 'H7l4w7', 'frsjfe', 'TestDePlace', 4, 1, 8, '2018-11-21', '2018-11-21');
 
 -- --------------------------------------------------------
 
@@ -106,37 +120,19 @@ INSERT INTO `internships` (`id`, `title`, `address`, `city`, `province`, `postal
 -- Structure de la table `internships_missions`
 --
 
-CREATE TABLE `internships_missions` (
+CREATE TABLE IF NOT EXISTS `internships_missions` (
   `internship_id` int(11) NOT NULL,
   `mission_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `internships_missions`
+-- Contenu de la table `internships_missions`
 --
 
 INSERT INTO `internships_missions` (`internship_id`, `mission_id`) VALUES
-(1, 1),
-(1, 23),
-(2, 5),
-(2, 6),
-(2, 7),
-(2, 8),
-(3, 1),
-(3, 2),
-(3, 3),
-(3, 4),
-(4, 14),
-(4, 31),
-(5, 1),
-(5, 2),
-(5, 3),
-(5, 7),
-(5, 27),
-(5, 29),
-(5, 31),
-(6, 1),
-(7, 1);
+(6, 2),
+(6, 10),
+(6, 14);
 
 -- --------------------------------------------------------
 
@@ -144,19 +140,18 @@ INSERT INTO `internships_missions` (`internship_id`, `mission_id`) VALUES
 -- Structure de la table `internships_students`
 --
 
-CREATE TABLE `internships_students` (
+CREATE TABLE IF NOT EXISTS `internships_students` (
   `id` int(11) NOT NULL,
   `internship_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `internships_students`
+-- Contenu de la table `internships_students`
 --
 
 INSERT INTO `internships_students` (`id`, `internship_id`, `student_id`) VALUES
-(1, 2, 5),
-(3, 4, 5);
+(11, 6, 23);
 
 -- --------------------------------------------------------
 
@@ -164,48 +159,20 @@ INSERT INTO `internships_students` (`id`, `internship_id`, `student_id`) VALUES
 -- Structure de la table `internships_types`
 --
 
-CREATE TABLE `internships_types` (
+CREATE TABLE IF NOT EXISTS `internships_types` (
   `internship_id` int(11) NOT NULL,
   `type_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `internships_types`
+-- Contenu de la table `internships_types`
 --
 
 INSERT INTO `internships_types` (`internship_id`, `type_id`) VALUES
-(1, 17),
-(2, 35),
-(2, 36),
-(2, 37),
-(3, 17),
-(3, 18),
-(3, 19),
-(3, 20),
-(3, 21),
-(4, 18),
-(4, 19),
-(4, 20),
-(4, 21),
-(4, 22),
-(4, 42),
-(5, 18),
-(5, 19),
-(5, 20),
-(5, 21),
-(5, 22),
-(5, 23),
-(5, 24),
-(5, 25),
-(5, 26),
-(5, 27),
-(5, 28),
-(5, 29),
-(5, 30),
-(5, 31),
-(5, 32),
-(5, 33),
-(6, 45);
+(6, 22),
+(6, 26),
+(6, 30),
+(6, 51);
 
 -- --------------------------------------------------------
 
@@ -213,13 +180,13 @@ INSERT INTO `internships_types` (`internship_id`, `type_id`) VALUES
 -- Structure de la table `missions`
 --
 
-CREATE TABLE `missions` (
+CREATE TABLE IF NOT EXISTS `missions` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `missions`
+-- Contenu de la table `missions`
 --
 
 INSERT INTO `missions` (`id`, `name`) VALUES
@@ -257,7 +224,7 @@ INSERT INTO `missions` (`id`, `name`) VALUES
 -- Structure de la table `students`
 --
 
-CREATE TABLE `students` (
+CREATE TABLE IF NOT EXISTS `students` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `student_number` int(10) NOT NULL,
@@ -267,26 +234,26 @@ CREATE TABLE `students` (
   `info` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `grade` decimal(3,0) DEFAULT NULL,
   `actif` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `students`
+-- Contenu de la table `students`
 --
 
 INSERT INTO `students` (`id`, `user_id`, `student_number`, `last_name`, `first_name`, `phone`, `info`, `grade`, `actif`) VALUES
-(5, 3, 222111111, 'Test 2', 'Test 2', '450-222-2222', 'Test 2', '74', NULL),
-(6, 7, 333, 'Test 3', 'Test 3', '450-333-3333', 'Test 3', NULL, 1),
-(7, NULL, 111, 'Test 1', 'Test 1', '450-111-1111', 'Test 1', NULL, 1),
-(12, 16, 111222333, 'Trump', 'Donald', '450.333.3333', 'douchbag3', '100', 1),
-(13, 20, 112233123, 'Bouchard', 'Louis', '450.325.7744', '', '85', 1),
+(5, NULL, 222333676, 'Test 2', 'Test 2', '450-222-2222', 'Test 2', '32', 1),
+(12, NULL, 111222333, 'Trump', 'Donald', '450.333.3333', 'douchbag3', '100', 1),
+(13, NULL, 112233123, 'Bouchard', 'Louis', '450.325.7744', '', '85', 1),
 (14, NULL, 201159247, 'Sylvain', 'Frederik', '514.888.8888', 'Je ne sais pas ce que je fait', '100', 1),
-(15, 23, 111111111, 'Aa', 'Aa', '999.999.9999', 'a', '89', 1),
-(16, 24, 111111112, 'Hello', 'Maybe Want to patch that', '999.999.9999', 'hahaha', '99', 1),
-(17, 25, 111111113, 'Hello', 'Again', '999.999.9999', 'Its the last one', '100', 1),
-(18, 26, 222222222, 'Test', 'Michel', '555.555.5555', '', '2', 1),
-(19, 28, 201159245, 'Sylvain', 'Frederik', '514.666.6666', '', '70', 1),
-(20, 29, 123412312, 'A', 'A', '222.222.2222', '2', '2', 1),
-(21, 30, 123123123, 'Torres', 'Agustin', '514.625.6565', 'PHP Novice', '100', 1);
+(15, NULL, 111111111, 'Aa', 'Aa', '999.999.9999', 'a', '89', 1),
+(16, NULL, 111111112, 'Hello', 'Maybe Want to patch that', '999.999.9999', 'hahaha', '99', 1),
+(17, NULL, 111111113, 'Hello', 'Again', '999.999.9999', 'Its the last one', '100', 1),
+(18, NULL, 222222222, 'Test', 'Michel', '555.555.5555', '', '2', 1),
+(19, NULL, 201159245, 'Sylvain', 'Frederik', '514.666.6666', '', '70', 1),
+(20, NULL, 123412312, 'A', 'A', '222.222.2222', '2', '2', 1),
+(21, NULL, 201111336, 'Sylvain', 'Frederik', '450.666.2222', '', '80', 1),
+(22, NULL, 200862745, 'Vaillancourt', 'Étienne', '514.515.8685', '', '90', 1),
+(23, 32, 123456789, 'Sylvain', 'Frederik', '450.682.6593', '', '99', 1);
 
 -- --------------------------------------------------------
 
@@ -294,7 +261,7 @@ INSERT INTO `students` (`id`, `user_id`, `student_number`, `last_name`, `first_n
 -- Structure de la table `supervisors`
 --
 
-CREATE TABLE `supervisors` (
+CREATE TABLE IF NOT EXISTS `supervisors` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `gender` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -311,19 +278,15 @@ CREATE TABLE `supervisors` (
   `extension` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `cellphone` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
   `fax` varchar(12) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `modified` datetime NOT NULL,
-  `edit` tinyint(4) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `active` tinyint(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `supervisors`
+-- Contenu de la table `supervisors`
 --
 
-INSERT INTO `supervisors` (`id`, `user_id`, `gender`, `first_name`, `last_name`, `title`, `location`, `address`, `city`, `province`, `postal_code`, `email`, `phone`, `extension`, `cellphone`, `fax`, `modified`, `edit`) VALUES
-(3, 17, 'Male', 'Roger', 'Michel', 'Test', 'Rue Test', 'Test 1', 'Test1000', 'Test', 'Test', 'michel@mail.com', '450.111.1111', '1114', '450.111.1117', '450.111.1112', '2018-10-24 20:31:37', 1),
-(5, 19, 'Female', 'Mary', 'Popins', 'Bell', 'Canada', '111 Rue Test', 'Montréal', 'Québec', 'H2A2A2', 'et_202@hotmail.com', '450.222.2222', '444', '450.222.2222', '450.222.2222', '0000-00-00 00:00:00', 1),
-(6, 22, 'Unknown', 'Bla', 'Blabla', 'Blabla master', 'Not here', '6060 perdu', 'lavalpas', 'QC', '666420', 'super@mail.com', '222.222.2222', '40', '222.222.2222', '222.222.2223', '0000-00-00 00:00:00', 0),
-(7, 27, 'Unknown', 'Louis', 'Bouchard', 'Prof', '', '', '', '', '', 'lBouchard@mail.com', '111.111.1111', '', '111.111.1111', '111.111.1111', '0000-00-00 00:00:00', 0);
+INSERT INTO `supervisors` (`id`, `user_id`, `gender`, `first_name`, `last_name`, `title`, `location`, `address`, `city`, `province`, `postal_code`, `email`, `phone`, `extension`, `cellphone`, `fax`, `active`) VALUES
+(8, 33, 'M.', 'Pavel', 'Zaka', '', '', '', '', '', '', 'zaharpl@hotmail.com', '514.639.2126', '', '514.639.2126', '514.639.2126', 0);
 
 -- --------------------------------------------------------
 
@@ -331,13 +294,13 @@ INSERT INTO `supervisors` (`id`, `user_id`, `gender`, `first_name`, `last_name`,
 -- Structure de la table `types`
 --
 
-CREATE TABLE `types` (
+CREATE TABLE IF NOT EXISTS `types` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `types`
+-- Contenu de la table `types`
 --
 
 INSERT INTO `types` (`id`, `name`) VALUES
@@ -347,27 +310,27 @@ INSERT INTO `types` (`id`, `name`) VALUES
 (20, 'Centre de jour et soins à domicile'),
 (21, 'Centre de jour, soins de clientèle hébergée'),
 (22, 'Hôpital de jour'),
-(23, 'Neurologie, pédiatrie poss d\'ortho/rhumato'),
+(23, 'Neurologie, pédiatrie poss d''ortho/rhumato'),
 (24, 'Ortho/rhumato'),
-(25, 'Ortho/rhumato et perte d\'autonomie'),
+(25, 'Ortho/rhumato et perte d''autonomie'),
 (26, 'Orthopédie/rhumatologie'),
 (27, 'Orthopédie/rhumatologie principalement'),
-(28, 'Orthopédie/rhumatologie, Perte d\'autonomie'),
+(28, 'Orthopédie/rhumatologie, Perte d''autonomie'),
 (29, 'Perte autonomie fonctionnelle'),
-(30, 'Perte d\'autonomie'),
-(31, 'Perte d\'autonomie et ortho/rhumato'),
-(32, 'Perte d\'autonomie un peu de neuro et d\'ortho'),
-(33, 'Perte d\'autonomie, cardiorespiratoire, palliatif'),
-(34, 'Perte d\'autonomie, neuro et quelques cas ortho'),
-(35, 'Perte d\'autonomie, neurologie (cas séquélaires et évolutifs)'),
-(36, 'Perte d\'autonomie, ortho, cardio, neuro'),
-(37, 'Perte d\'autonomie, ortho/rhumato'),
-(38, 'Perte d\'autonomie, ortho/rhumato, cardiorespiratoire'),
-(39, 'Perte d\'autonomie, ortopédie/rhumato, neuro'),
-(40, 'Perte d\'autonomie, Orthopédie/rhumatologie'),
-(41, 'Perte d\'autonomie, orthopédie/rhumatologie,neuro'),
-(42, 'Perte d\'autonomie, orthopédie/rhumatologie, neuro, cardiorespiratoire'),
-(43, 'Principalement ortho/rhumato, un eu de perte d\'autonomie'),
+(30, 'Perte d''autonomie'),
+(31, 'Perte d''autonomie et ortho/rhumato'),
+(32, 'Perte d''autonomie un peu de neuro et d''ortho'),
+(33, 'Perte d''autonomie, cardiorespiratoire, palliatif'),
+(34, 'Perte d''autonomie, neuro et quelques cas ortho'),
+(35, 'Perte d''autonomie, neurologie (cas séquélaires et évolutifs)'),
+(36, 'Perte d''autonomie, ortho, cardio, neuro'),
+(37, 'Perte d''autonomie, ortho/rhumato'),
+(38, 'Perte d''autonomie, ortho/rhumato, cardiorespiratoire'),
+(39, 'Perte d''autonomie, ortopédie/rhumato, neuro'),
+(40, 'Perte d''autonomie, Orthopédie/rhumatologie'),
+(41, 'Perte d''autonomie, orthopédie/rhumatologie,neuro'),
+(42, 'Perte d''autonomie, orthopédie/rhumatologie, neuro, cardiorespiratoire'),
+(43, 'Principalement ortho/rhumato, un eu de perte d''autonomie'),
 (44, 'Soins clientèle à domicile'),
 (45, 'Soins clientèle à domicile et clientèle externe'),
 (46, 'Soins clientèle à domicile et en hébergement, Centre de jour'),
@@ -394,37 +357,24 @@ INSERT INTO `types` (`id`, `name`) VALUES
 -- Structure de la table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `role` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `users`
+-- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 (1, 'admin@mail.com', '$2y$10$npgIDB2lHgPZsiCs1JnjzuNKz27c8poSvu/JaaA8/RvSYrfbkJvce', 'admin'),
-(3, 'test@mail.com', '$2y$10$Z3vo5a3brlvW5dWoIecCmOy5Y4ljkD1svICQ/SvVyoJYN8vtffTD6', 'student'),
-(7, 'test3@mail.com', '$2y$10$CPSCx1wkIdV5v/nmC.CocOdstB9h8d3nt8KXudP5UdfF/TUtGEqLu', 'student'),
-(16, 'dtrump@mail.com', '$2y$10$x82HYeqAjnZP0.K6KLhx9.JZPVyfqA3zpOAbUm/DBP0guuq/GRpR.', 'student'),
-(17, 'michel@mail.com', '$2y$10$JqNXR8UtwxezPGIvb8WYhen1c.vFqPbxMIhcI7NXWA8MhXtAE5Oty', 'supervisor'),
-(19, 'popins@mail.com', '$2y$10$5rAZIEKfjGilAD5hlOg7mepcvfI5.Qwud7Zkt4EK4Y2.JQ93ehy3G', 'supervisor'),
-(20, 'bouchard@mail.com', '$2y$10$wAK7NTghxsNGB9CmMSPVAOAObxyCIA9bQeL4JSk42mwrtdNLLLbN.', 'student'),
-(22, 'super@mail.com', '$2y$10$bWDwCD4is3RVzra0xZLg/OIW5ypXxUWogHE7V9TnanmDZAQVtDfdC', 'supervisor'),
-(23, 'aa@aa.ca', '$2y$10$D9.TUMrKIeCs8iSlCATGG.b2LGBhbTPZHbCRTlBDZaLVumclXM3TG', 'student'),
-(24, 'oups@got.trooled', '$2y$10$SP7M8vLUc8SfnASXTQx/rOxm4aDgrBaCidQY.Xn/vyZWMJ6AuXTwq', 'student'),
-(25, 'aa@aa.com', '$2y$10$S.zHI712ou4dp93oOGbIcu/77ps4UZOBMcqwLRquFcFHMLe/1R5yi', 'student'),
-(26, 'test1@mail.com', '$2y$10$82pefjqy5XdcbK9O0TYCO.Mp0H7pduIafm1ajz7mUMJP/cJl3680e', 'student'),
-(27, 'lbouchard@mail.com', '$2y$10$q9qMtouPLkeJKokt8fDM2uzzj.uVIKfkUkszvKIV/8wS5.E5C6JFG', 'supervisor'),
-(28, 'fred@mail.com', '$2y$10$qnqBB/JMSWy5Wkbr4d0lcOvbMms7uBpsPv0nzs13m6UzQ.lB6mDhi', 'student'),
-(29, '222@gmail.com', '$2y$10$uSYBbPEX9peu0y3tNrLkUOC8l3Lw0GX6vHvWs1N67HPUDBVWv7lQ.', 'student'),
-(30, 'agutorres16@gmail.com', '$2y$10$wCpVgJt6xqUJdur/TW6JXexAQo82AtScc4wJJsHdMXuFeeMVqkWKS', 'student');
+(32, 'frederik.sylvain6@hotmail.com', '$2y$10$4TqpX7xuA5D.yB5qtFRbjuWL5IVePgmOlkeLb7o1phX47Fp89v22.', 'student'),
+(33, 'zaharpl@hotmail.com', '$2y$10$GSkwgCN/xM9JT.ja0iYMouTaPCiTw2mEZl0uv7gK/KHTMiSXH44g6', 'supervisor');
 
 --
--- Index pour les tables déchargées
+-- Index pour les tables exportées
 --
 
 --
@@ -439,6 +389,13 @@ ALTER TABLE `admins`
 --
 ALTER TABLE `buildings_types`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `student_id` (`student_id`);
 
 --
 -- Index pour la table `internships`
@@ -504,65 +461,61 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
 -- AUTO_INCREMENT pour la table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `buildings_types`
 --
 ALTER TABLE `buildings_types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT pour la table `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT pour la table `internships`
 --
 ALTER TABLE `internships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT pour la table `internships_students`
 --
 ALTER TABLE `internships_students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT pour la table `missions`
 --
 ALTER TABLE `missions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT pour la table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT pour la table `supervisors`
 --
 ALTER TABLE `supervisors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `types`
 --
 ALTER TABLE `types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
 --
--- Contraintes pour les tables déchargées
+-- Contraintes pour les tables exportées
 --
 
 --
@@ -570,6 +523,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `admins`
   ADD CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `files`
+--
+ALTER TABLE `files`
+  ADD CONSTRAINT `files_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `internships`
@@ -610,7 +569,6 @@ ALTER TABLE `students`
 --
 ALTER TABLE `supervisors`
   ADD CONSTRAINT `supervisors_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

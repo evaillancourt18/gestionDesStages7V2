@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
+use Cake\Event\Event;
 
 /**
  * Users Controller
@@ -15,7 +17,7 @@ class UsersController extends AppController {
 
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['logout']);
+        $this->Auth->allow(['logout', 'forgot', 'sendCode', 'changePassword']);
     }
 
     public function isAuthorized($user) {
@@ -290,5 +292,84 @@ class UsersController extends AppController {
                 $this->Flash->error(__('The account could not be saved. Please, try again.'));
             }
         }
+    }
+
+    public function forgot () {}
+
+    public function sendCode() {
+        if ($this->request->is('post')) {
+            
+            $email = $this->request->getData('email');
+
+            if($this->Users->exists(['email' => $email])) {
+                $token = $this->createToken($email);
+                $time = time();
+                
+                $user = $this->Users->find('all', ['conditions' => ['Users.email' => $email]])->first();
+
+                $user->token = $token;
+                $user->time_stamp = $time;
+                
+                if($this->Users->save($user)) {
+                    
+                    $this->emailChangePassword($user->email, $token);     
+
+                    $this->Flash->success(__('The email for changing the password has been sent.'));
+                }
+  
+            } else {
+                $this->Flash->error(__("The email " . $email .  " doesn't exist."));
+            } 
+        }
+        return $this->redirect(['action' => 'login']);
+    }
+
+    public function createToken($email){
+
+        $token = sha1(uniqid($email,true));
+
+        return $token;
+    }
+
+    public function emailChangePassword($address, $token) {
+        $link = "http://" . $_SERVER['HTTP_HOST'] . $this->request->webroot . "users/changePassword/" . $token;
+
+        $email = new Email('default');
+        $email->setTo($address);
+        $email->subject(__("Changer le mot de passe"));
+        $email->send("Utiliser ce lien pour changer votre mot de passe:\r\n\r\n" . $link);
+    }
+
+    public function changePassword($token = null) {
+    
+        if($this->Users->exists(['token' => $token])) {
+            
+            $user = $this->Users->find('all', ['conditions' => ['Users.token' => $token]])->first();
+
+            $currentTime = time();
+
+            if($currentTime < $user->time_stamp + 900) {
+                if($this->request->is(['patch', 'post', 'put'])) {
+                    $user = $this->Users->patchEntity($user, $this->request->data);
+                    $user->token = null;
+                    $user->time_stamp = null;
+      
+                    if ($this->Users->save($user)) {
+                        $this->Flash->set(__('Your password has been modified.'));
+                        $this->redirect(['action' => 'login']);
+                    } else {
+                        $this->Flash->error(__('The password could not be modified.'));
+                    }
+                }
+                $this->set(compact('user'));
+            } else {
+                $this->Flash->error('The link has expired.');
+                $this->redirect(['action' => 'login']);
+            }
+
+        } else {
+            $this->Flash->error('Invalid link.');
+            $this->redirect(['action' => 'login']);
+        } 
     }
 }

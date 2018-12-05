@@ -30,7 +30,10 @@ class User extends Entity
         'email' => true,
         'password' => true,
         'role' => true,
-        'students' => true
+        'students' => true,
+        'token' => true,
+        'time_stamp' => true
+
     ];
 
     /**
