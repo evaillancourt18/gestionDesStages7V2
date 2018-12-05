@@ -18,22 +18,9 @@ class StudentsController extends AppController
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
-        if ( $user['role'] === 'supervisor' && $action === 'view' || $action === 'viewFile') {
+        if ( $user['role'] === 'supervisor' && $action === 'view' || $action === 'viewFile' || $action === 'indexActive') {
             return true;
         }
-
-        
-        /*
-        if (in_array($action, ['add', 'edit'])) {
-            return true;
-        }
-
-        $id = $this->request->getParam('pass.0');
-        if (!$id) {
-            return false;
-        }
-         
-         */
     }
 
     /**
@@ -42,6 +29,13 @@ class StudentsController extends AppController
      * @return \Cake\Http\Response|void
      */
     public function index()
+    {
+        $students = $this->paginate($this->Students, ['contain' => ['Users']]);
+
+        $this->set(compact('students'));
+    }
+
+    public function indexActive()
     {
         $students = $this->paginate($this->Students, ['contain' => ['Users']]);
 
