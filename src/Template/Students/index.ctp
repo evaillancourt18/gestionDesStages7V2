@@ -10,7 +10,9 @@
         <li><?= $this->Html->link(__('List Supervisors'), ['controller' => 'Supervisors', 'action' => 'index']) ?></li>      	
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Supervisor Account'), ['controller' => 'Users', 'action' => 'addSuper']) ?></li>
-    </ul>
+        <li><?= $this->Html->link(__('List Student without internships'), ['action' => 'index' , 'taken']) ?></li>
+        
+    </ul>   
 </nav>
 <div class="students index large-9 medium-8 columns content">
     <h3><?= __('Students') ?></h3>

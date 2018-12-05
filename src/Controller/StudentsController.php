@@ -18,7 +18,7 @@ class StudentsController extends AppController
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
-        if ( $user['role'] === 'supervisor' && $action === 'view' || $action === 'viewFile' || $action === 'indexActive') {
+        if ( $user['role'] === 'supervisor' && $action === 'view' || $action === 'viewFile' || $action === 'indexActive' || $action === 'isTaken') {
             return true;
         }
     }
@@ -28,10 +28,14 @@ class StudentsController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
+    public function index($status = null)
     {
+        if($status){
+        $students = $this->paginate($this->Students->find('all', ['contain' =>['Users'],'conditions' => ['Students.taken' => false]]));
+        
+        }else{
         $students = $this->paginate($this->Students, ['contain' => ['Users']]);
-
+        }
         $this->set(compact('students'));
     }
 
@@ -121,5 +125,23 @@ class StudentsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function isTaken($id = null){
+        $this->autoRender = false;
+
+        $student = $this->Students->get($id, [
+            'contain' => []
+        ]);
+        $student['taken'] = true;
+
+        if ($this->Students->save($student)) {
+            $this->Flash->success(__('The student has been saved.'));
+
+            return $this->redirect(['action' => 'indexActive']);
+        }else{
+            $this->Flash->success(__('The student could not be taken.'));
+        }
+        
     }
 }

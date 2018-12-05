@@ -41,6 +41,9 @@ $loguser = $this->request->session()->read('Auth.User')
         </tr>
         <?php endif; ?>
     </table>
+    <?= $this->Form->create('Take this student', ['type' => 'GET', 'url' => ['action'=> 'isTaken', $student['id']]])  ?>
+    <?= $this->Form->button('Take this student')  ?>
+    <?= $this->Form->end()  ?>
     <div class="row">
         <h4><?= __('Info') ?></h4>
         <?php
