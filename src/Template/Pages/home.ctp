@@ -17,6 +17,7 @@
         <?php if ($loguser == null) : ?>
             <li> <?= $this->Html->link(__('New Student Account'), ['controller' => 'users', 'action' => 'addStudent']) ?></li>
         <?php elseif ($loguser['role'] == 'supervisor') : ?>
+            <li> <?= $this->Html->link(__('List Students'), ['controller' => 'Students', 'action' => 'indexActive']) ?></li>			
             <li> <?= $this->Html->link(__('New Internship'), ['controller' => 'Internships', 'action' => 'add', $loguser['id']]) ?></li>
         <?php endif ?>
     </ul>

@@ -42,11 +42,17 @@ class StudentsTable extends Table
             'joinType' => 'INNER'
         ]);
 
+        $this->hasMany('Files', [
+            'foreignKey' => 'student_id'
+        ]);
+
         $this->belongsToMany('Internships', [
             'foreignKey' => 'student_id',
             'targetForeignKey' => 'internship_id',
             'joinTable' => 'internships_students'
         ]);
+
+       
     }
 
     /**

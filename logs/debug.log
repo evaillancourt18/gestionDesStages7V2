@@ -23512,6 +23512,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-21 19:52:58 Notice: Notice (8): Undefined variable: internships in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Internships\index.ctp, line 58]
 Request URL: /internships
 Referer URL: http://localhost/gestionDesStages7V2/internships
@@ -24605,6 +24606,17 @@ Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
 Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+=======
+2018-11-28 17:45:39 Notice: Notice (8): Undefined variable: fileName in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\FilesController.php, line 72]
+Request URL: /files/add/32
+Referer URL: http://localhost/gestionDesStages7V2/files/add/32
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+App\Controller\FilesController::add() - APP/Controller\FilesController.php, line 72
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -24624,6 +24636,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:45:04 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/inactive
 Referer URL: http://localhost/gestionDesStages7V2/supervisors
@@ -24636,6 +24649,17 @@ Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
 Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+=======
+2018-11-28 17:45:39 Notice: Notice (8): Undefined variable: uploadPath in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\FilesController.php, line 73]
+Request URL: /files/add/32
+Referer URL: http://localhost/gestionDesStages7V2/files/add/32
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+App\Controller\FilesController::add() - APP/Controller\FilesController.php, line 73
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -24655,6 +24679,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:45:07 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/active
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/inactive
@@ -24667,6 +24692,17 @@ Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
 Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
 Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+=======
+2018-11-28 17:58:31 Notice: Notice (8): Undefined variable: id in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\FilesController.php, line 80]
+Request URL: /files/add
+Referer URL: http://localhost/gestionDesStages7V2/files/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+App\Controller\FilesController::add() - APP/Controller\FilesController.php, line 80
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 596
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 120
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
@@ -24686,6 +24722,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:45:17 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/inactive
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/active
@@ -24693,6 +24730,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Undefined variable: student in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 23]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 23
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24717,6 +24763,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:45:20 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/active
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/inactive
@@ -24724,6 +24771,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 23]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 23
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24748,6 +24804,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:45:33 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/inactive
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/active
@@ -24755,6 +24812,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Undefined variable: student in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 23]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 23
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24779,6 +24845,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:45:36 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/inactive
@@ -24786,6 +24853,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 23]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 23
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24810,6 +24886,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:45:40 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/active
 Referer URL: http://localhost/gestionDesStages7V2/supervisors
@@ -24817,6 +24894,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Undefined variable: student in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 27]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 27
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24841,6 +24927,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:46:02 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/active
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/active
@@ -24848,6 +24935,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 27]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 27
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24872,6 +24968,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:46:04 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors/index/inactive
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/active
@@ -24879,6 +24976,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Undefined variable: student in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 31]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 31
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24903,6 +25009,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 18:46:06 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Supervisors\index.ctp, line 72]
 Request URL: /supervisors
 Referer URL: http://localhost/gestionDesStages7V2/supervisors/index/inactive
@@ -24910,6 +25017,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Supervisors\index.ctp, line 72
+=======
+2018-11-28 19:40:04 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 31]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 31
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24934,6 +25050,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 19:20:44 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Users\forgot.ctp, line 4]
 Request URL: /users/forgot
 Referer URL: http://localhost/gestionDesStages7V2/users/forgot
@@ -24941,6 +25058,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Users\forgot.ctp, line 4
+=======
+2018-11-28 20:23:04 Notice: Notice (8): Use of undefined constant br - assumed 'br' in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 49]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 49
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24965,6 +25091,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 19:20:44 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Users\forgot.ctp, line 4]
 Request URL: /users/forgot
 Referer URL: http://localhost/gestionDesStages7V2/users/forgot
@@ -24972,6 +25099,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Users\forgot.ctp, line 4
+=======
+2018-11-28 20:23:04 Notice: Notice (8): Use of undefined constant br - assumed 'br' in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 49]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 49
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -24996,6 +25132,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-11-28 20:50:54 Notice: Notice (8): Undefined property: Cake\ORM\Query::$id in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\UsersController.php, line 308]
 Request URL: /users/send-code
 Referer URL: http://localhost/gestionDesStages7V2/users/forgot
@@ -25171,6 +25308,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
 Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
 include - APP/Template\Users\change_password.ctp, line 2
+=======
+2018-11-28 20:23:04 Notice: Notice (8): Use of undefined constant br - assumed 'br' in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Template\Students\view.ctp, line 49]
+Request URL: /students/view/23
+Referer URL: http://localhost/gestionDesStages7V2/internships-students/view-application/7
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\Core\BasePlugin::{closure}() - ROOT\vendor\cakephp\debug_kit\config\bootstrap.php, line 41
+include - APP/Template\Students\view.ctp, line 49
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
 Cake\View\View::_render() - CORE\src\View\View.php, line 1201
 Cake\View\View::render() - CORE\src\View\View.php, line 803
@@ -25195,6 +25341,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+<<<<<<< HEAD
 2018-12-05 00:02:16 Notice: Notice (8): Undefined variable: created in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\src\Controller\UsersController.php, line 309]
 Request URL: /users/send-code
 Referer URL: http://localhost/gestionDesStages7V2/users/forgot
@@ -25251,3 +25398,5 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
 
 
 
+=======
+>>>>>>> 3814ba9fe4e316e3100ef8edc5cc9ac889f6bfe2

@@ -18,22 +18,9 @@ class StudentsController extends AppController
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
-        if ( $user['role'] === 'supervisor' && $action === 'view') {
+        if ( $user['role'] === 'supervisor' && $action === 'view' || $action === 'viewFile' || $action === 'indexActive') {
             return true;
         }
-
-        
-        /*
-        if (in_array($action, ['add', 'edit'])) {
-            return true;
-        }
-
-        $id = $this->request->getParam('pass.0');
-        if (!$id) {
-            return false;
-        }
-         
-         */
     }
 
     /**
@@ -42,6 +29,13 @@ class StudentsController extends AppController
      * @return \Cake\Http\Response|void
      */
     public function index()
+    {
+        $students = $this->paginate($this->Students, ['contain' => ['Users']]);
+
+        $this->set(compact('students'));
+    }
+
+    public function indexActive()
     {
         $students = $this->paginate($this->Students, ['contain' => ['Users']]);
 
@@ -60,9 +54,29 @@ class StudentsController extends AppController
         $student = $this->Students->get($id, [
             'contain' => []
         ]);
+        $files = $this->Students->Files->findByStudentId($id)->toArray();
 
-        $this->set('student', $student);
+        $this->set(compact('student', 'files'));
     }
+
+    public function viewFile($id = null)
+    {
+        $file = $this->Students->Files->findById($id)->first();
+        $filepath = "Files/" . $file['path'] . $file['name'];
+        header('Pragma: public');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+        header('Cache-Control: private', false);
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
+        header('Content-Transfer-Encoding: binary');
+        header('Content-Length: ' . filesize($filepath));
+        readfile($filepath);
+        exit;
+        
+        $this->set(compact( 'file'));
+    }
+
 
     /**
      * Edit method

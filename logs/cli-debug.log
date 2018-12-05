@@ -1,0 +1,152 @@
+2018-09-19 21:34:16 Notice: Notice (8): Undefined index: Users in [C:\Program Files (x86)\Ampps\www\GestionDesStages7\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 238]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 238
+Twig_Template::getAttribute() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 679
+__TwigTemplate_5a51542bfe271ff09a3ba6062b8a00ca55c35cddebf81b855cec420286e1fe6a::doDisplay() - ROOT\tmp\cache\twigView\3a\3aad339b83fdc0fa2b4607e5bceb31a26d7ec6102a5677d512469400ae9f35f2.php, line 22
+Twig_Template::displayWithErrorHandling() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 432
+Twig_Template::display() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 403
+Twig_Template::render() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 411
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 956
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 114
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 100
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 273
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 274
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 518
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2018-11-02 15:38:39 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\SupervisorsTableTest::$Supervisor in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Model\Table\SupervisorsTableTest.php, line 44]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\SupervisorsTableTest::testFindEdited() - ROOT\tests\TestCase\Model\Table\SupervisorsTableTest.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-02 15:40:09 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\SupervisorsTableTest::$Supervisor in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Model\Table\SupervisorsTableTest.php, line 44]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\SupervisorsTableTest::testFindEdited() - ROOT\tests\TestCase\Model\Table\SupervisorsTableTest.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-02 15:40:34 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\SupervisorsTableTest::$Supervisor in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Model\Table\SupervisorsTableTest.php, line 44]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\SupervisorsTableTest::testFindEdited() - ROOT\tests\TestCase\Model\Table\SupervisorsTableTest.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-06 19:13:42 Notice: Notice (8): Undefined property: Cake\ORM\Query::$active in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Model\Table\StudentsTableTest.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\StudentsTableTest::testEditing() - ROOT\tests\TestCase\Model\Table\StudentsTableTest.php, line 125
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-06 19:14:43 Notice: Notice (8): Undefined property: Cake\ORM\Query::$actif in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Model\Table\StudentsTableTest.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\StudentsTableTest::testEditing() - ROOT\tests\TestCase\Model\Table\StudentsTableTest.php, line 125
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-07 19:17:58 Notice: Notice (8): Undefined variable: studentId in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2-1\tests\TestCase\Controller\StudentsControllerTest.php, line 111]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\StudentsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\StudentsControllerTest.php, line 111
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-28 17:21:53 Notice: Notice (8): Undefined index: Students in [C:\Program Files (x86)\Ampps\www\gestionDesStages7V2\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 238]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 238
+Twig_Template::getAttribute() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 679
+__TwigTemplate_40bfa038ae18f6b270bea742f31ac7332aa6e4d5db670baa4915467f6919d417::doDisplay() - ROOT\tmp\cache\twigView\bc\bcfe6235a9f74e053e9e4a44052865aa2aad2cc733d25118066ce05ccea686ad.php, line 22
+Twig_Template::displayWithErrorHandling() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 432
+Twig_Template::display() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 403
+Twig_Template::render() - ROOT\vendor\twig\twig\lib\Twig\Template.php, line 411
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 971
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 273
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 274
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 518
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 342
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
+[main] - ROOT\bin\cake.php, line 12
+
+
+
