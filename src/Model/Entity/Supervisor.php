@@ -55,6 +55,7 @@ class Supervisor extends Entity
         'slug' => true,
         'internships' => true,
         'modified' => true,
-        'edit' => true
+        'edit' => true,
+        'active' => true
     ];
 }

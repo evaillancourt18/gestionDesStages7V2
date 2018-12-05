@@ -24,8 +24,19 @@ class SupervisorsController extends AppController {
      *
      * @return \Cake\Http\Response|void
      */
-    public function index() {
+    public function index($status = null) {
         $supervisors = $this->paginate($this->Supervisors, ['contain' => ['Users']]);
+
+        if($status === 'active') {
+            
+            $supervisors = $this->paginate($this->Supervisors->find('all', ['conditions' => ['Supervisors.active' => true]]));
+        
+        } else if ($status === 'inactive') {
+            $supervisors = $this->paginate($this->Supervisors->find('all', ['conditions' => ['Supervisors.active' => false]]));
+        
+        } else {
+            $supervisors = $this->paginate($this->Supervisors);
+        }
 
         $this->set(compact('supervisors'));
     }

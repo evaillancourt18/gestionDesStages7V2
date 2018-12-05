@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Supervisor[]|\Cake\Collection\CollectionInterface $supervisors
  */
+$loguser = $this->request->getSession()->read('Auth.User');
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -14,6 +15,18 @@
 </nav>
 <div class="supervisors index large-9 medium-8 columns content">
     <h3><?= __('Supervisors') ?></h3>
+
+     <?php 
+
+        if($loguser['role'] === 'admin') {
+            echo $this->Html->link($this->Form->button('Active'), array('action' => 'index', 'active'), array('escape'=>false)); 
+            echo "\r\n";
+            echo $this->Html->link($this->Form->button('Inactive'), array('action' => 'index', 'inactive'), array('escape'=>false)); 
+            echo "\r\n";
+            echo $this->Html->link($this->Form->button('All'), array('action' => 'index'), array('escape'=>false));
+        }
+    ?>
+
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -56,7 +69,7 @@
                     <td><?= h($supervisor->extension) ?></td>
                     <td><?= h($cellphone) ?></td>
                     <td><?= h($fax) ?></td>
-                    <td><?= h($supervisor['user']->email) ?></td>
+                    <td><?= h($supervisor->email) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $supervisor->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $supervisor->id]) ?>
