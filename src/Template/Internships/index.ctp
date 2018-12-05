@@ -17,8 +17,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
             <li> <?= $this->Html->link(__('New Internship'), ['controller' => 'Internships', 'action' => 'add', $loguser['id']]) ?></li>
         <?php endif ?>
         <?php if ($loguser['role'] == 'student') : ?>
-        <li><?= $this->Html->link(__('List of ap
-        plication'), ['controller' => 'InternshipsStudents', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List of application'), ['controller' => 'InternshipsStudents', 'action' => 'index']) ?></li>
          <?php endif ?>
        
     </ul>

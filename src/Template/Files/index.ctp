@@ -28,7 +28,7 @@
             ?>
             <tr>
                 <td><?= $this->Number->format($file->id) ?></td>
-                <td><?= h($file->name) ?></td>
+                <td><?= $this->Html->link(__($file['name']), ['controller' => 'students','action' => 'viewFile', $file['id']]); ?></td>
                 <td><?= h($file->path) ?></td>
                 <td><?= $this->Number->format($file->student_id) ?></td>
                 <td class="actions">
